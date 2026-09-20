@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>写给模型的话 · Prompt × Streaming 学习笔记</title>
+<title>Prompt 是什么 · Prompt × Streaming 学习笔记</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600&family=Noto+Sans+SC:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -1234,17 +1234,17 @@
   <div class="canvas-card">
     <canvas class="ascii-bg" aria-hidden="true"></canvas>
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">STACY · 2026.07 · 01 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">STACY · 2026.07 · 01 / 16</div>
     </div>
 
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2.6vh">
-      <div data-anim="kicker" class="t-meta" style="color:rgba(6,51,59,.78);letter-spacing:.22em">一份边学边记的笔记</div>
+      <div data-anim="kicker" class="t-meta" style="color:rgba(6,51,59,.78);letter-spacing:.22em">学习笔记 · LEARNING NOTES</div>
 
-      <h1 data-anim="title" style="align-self:center;font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(11.6vw,19vh);line-height:.94;letter-spacing:-.025em;color:var(--accent-on)">写给<span style="font-style:italic;font-weight:300">模型</span>的话</h1>
+      <h1 data-anim="title" style="align-self:center;font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(11.6vw,19vh);line-height:.94;letter-spacing:-.025em;color:var(--accent-on)">Prompt <span style="font-style:italic;font-weight:300">是什么</span></h1>
 
       <div data-anim="bottom" style="display:grid;grid-template-rows:auto auto;gap:1.6vh;border-top:1px solid rgba(6,51,59,.25);padding-top:2vh">
-        <div data-anim="lead" class="lead" style="max-width:52ch;color:rgba(6,51,59,.86)">说白了就两件事：怎么跟 AI 说话它才靠谱，以及它一边想一边往外蹦字时，界面该怎么接住。</div>
+        <div data-anim="lead" class="lead" style="max-width:54ch;color:rgba(6,51,59,.86)">一份关于 Prompt 与流式输出的学习笔记——写给模型的指令，也是写给自己的设计判断。</div>
         <div style="display:flex;justify-content:space-between;align-items:end">
           <div class="t-meta" style="color:rgba(6,51,59,.62)">STACY · 智慧水务 UED · 2026 / 07</div>
           <div class="t-meta" style="color:rgba(6,51,59,.62)">→ 方向键翻页</div>
@@ -1258,21 +1258,18 @@
 <section class="slide" data-animate="statement" data-slide-id="thesis">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">02 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">CORE IDEA · 02 / 16</div>
     </div>
     <span class="dot-mat lg" style="position:absolute;right:0;top:0;width:34vw;height:34vw"></span>
     <span class="ring-mat" style="position:absolute;left:5vw;bottom:6vh;width:15vw;height:15vw"></span>
 
-    <div data-anim="line" class="t-cat accent" style="margin-top:6vh">先说结论</div>
-    <h1 data-anim="up" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(8.2vw,14vh);line-height:1.06;letter-spacing:-.025em;margin-top:2.4vh">别把 prompt 当咒语，<br/>它更像在划<span style="font-style:italic;font-weight:300">边界</span>。</h1>
+    <div data-anim="line" class="t-cat accent" style="margin-top:6vh">核心判断 · THE THESIS</div>
+    <h1 data-anim="up" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(8.2vw,14vh);line-height:1.04;letter-spacing:-.03em;margin-top:2.4vh">Prompt 不是咒语，<br/>是<span style="font-style:italic;font-weight:300">边界</span>。</h1>
 
     <div data-anim="up" style="margin-top:auto;display:flex;justify-content:space-between;align-items:end;gap:3vw;border-top:1px solid var(--border-subtle);padding-top:2vh">
-      <div style="display:flex;flex-direction:column;gap:.8vh;max-width:56ch">
-        <p class="lead">我以前以为写得越长越厉害，后来发现完全不是。</p>
-        <p class="lead">每一句话，其实都在回答同一个问题——<br/>这件事到底该谁拍板，模型，还是人？</p>
-      </div>
-      <div class="t-meta" style="white-space:nowrap">— 全场就这一条主线</div>
+      <div class="lead" style="max-width:56ch">每一段指令，本质上都在划同一条线：什么交给机器，什么留给人。<br/>这份笔记从头到尾，只回答这一个问题。</div>
+      <div class="t-meta" style="white-space:nowrap">— 全场主线</div>
     </div>
   </div>
 </section>
@@ -1281,76 +1278,115 @@
 <section class="slide" data-animate="grid-reveal" data-slide-id="three-kinds">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">是什么 · 03 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">WHAT · 是什么 01 · 03 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">是什么</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">prompt 也分三层，写的人不一样</h2>
-      <p class="lead" style="max-width:56ch">刚学时我以为 prompt 就是一段话。其实它有三层，各管各的事。</p>
+      <div class="t-cat">WHAT · 是什么</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">三类 Prompt：谁负责什么</h2>
+      <p class="lead" style="max-width:56ch">System 定角色，User 下任务，Developer 立规矩——作用范围、生效时机与编写者各不相同。</p>
     </div>
 
     <div class="sub-grid-3-2" style="grid-template-rows:1fr;margin-top:4vh">
       <article class="sub-card">
         <span class="nb-corner">01</span>
-        <h4 class="ttl">System · 定人设</h4>
-        <p class="desc">每次聊天都生效的"长期人设"：你是谁、能干嘛、说话什么调调。有点像给新同事写岗位说明书。</p>
+        <h4 class="ttl">System · 定角色</h4>
+        <p class="desc">级别最高的长期规则，作用于每一次对话。划定 AI 的身份、能力边界与语气品味，相当于一份岗位说明书。</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">02</span>
         <h4 class="ttl">User · 下任务</h4>
-        <p class="desc">我们每天真正在写的就是它：帮我总结、帮我改、帮我看看。说得越具体，它干得越像样。</p>
+        <p class="desc">一次对话中的具体指令：总结、生成、判断。最常被书写的一类，越具体，结果越可靠。</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">03</span>
         <h4 class="ttl">Developer · 立规矩</h4>
-        <p class="desc">程序员管的一层：用什么工具、数据什么格式。负责让输出守秩序，常识就不用再往里塞了。</p>
+        <p class="desc">技术要求、工具使用规范与工程约束，让输出更有秩序；常识性规则不必写入。</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ 04 · Few-shot · three-forces ============ -->
-<section class="slide" data-animate="three-forces" data-slide-id="few-shot">
+<!-- ============ 04 · System prompt 实例拆解（新增）· duo-mirror ============ -->
+<section class="slide" data-animate="duo-mirror" data-slide-id="system-breakdown">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">怎么用 · 04 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">WHAT · 是什么 02 · 04 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">怎么用</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">Few-shot：与其讲道理，不如给个样例</h2>
+      <div class="t-cat">WHAT · 是什么</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">一份真实 System prompt 的两层结构</h2>
     </div>
 
-    <div data-anim="up" style="flex:1;display:grid;grid-template-columns:5fr 11fr;gap:1.6vw;margin-top:4vh;min-height:0">
-      <div class="card-ink" style="padding:3.4vh 2vw;display:flex;flex-direction:column;gap:2vh;position:relative;overflow:hidden">
+    <div class="duo-compare" style="margin-top:4vh">
+      <div class="col accent">
+        <div class="col-tag"><span class="num">A</span>角色设定 · 是谁、能做什么</div>
+        <h3 class="col-ttl" style="font-size:2.8vw">身份与职责</h3>
+        <ul class="col-list">
+          <li>身份：智慧水务领域的 UED 设计合伙人，而非通用助手</li>
+          <li>服务对象：调度员、值班、管网、抢修、客服与决策层</li>
+          <li>工作范围：需求、信息架构、交互、视觉直至跨部门协作</li>
+          <li>立场：主动提示风险、翻译专业术语、守住设计品味</li>
+        </ul>
+      </div>
+      <span class="vrule"></span>
+      <div class="col">
+        <div class="col-tag"><span class="num">B</span>角色性格 · 语气与审美</div>
+        <h3 class="col-ttl" style="font-size:2.8vw">腔调与品味</h3>
+        <ul class="col-list">
+          <li>审美总纲：包容、精准、优雅，克制而有秩序</li>
+          <li>表达：中文优先、先结论后理由、高中生也能听懂</li>
+          <li>温度：让一线师傅少跑几趟、少挨投诉，而非只谈效率</li>
+          <li>洁癖：具体到按钮怎么放、文案怎么写，拒绝空话</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 · Few-shot · three-forces（三个真实案例） ============ -->
+<section class="slide" data-animate="three-forces" data-slide-id="few-shot">
+  <div class="canvas-card">
+    <div class="chrome-min">
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">HOW · 怎么用 01 · 05 / 16</div>
+    </div>
+
+    <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+      <div class="t-cat">HOW · 怎么用</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">Few-shot：给范本，比讲道理快</h2>
+    </div>
+
+    <div data-anim="up" style="flex:1;display:grid;grid-template-columns:5fr 11fr;gap:1.6vw;margin-top:3.4vh;min-height:0">
+      <div class="card-ink" style="padding:3.2vh 2vw;display:flex;flex-direction:column;gap:1.8vh;position:relative;overflow:hidden">
         <span class="dot-mat" style="position:absolute;right:-2vw;bottom:-2vw;width:14vw;height:14vw;opacity:.28"></span>
-        <div class="t-cat on-dark">什么意思</div>
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(2.6vw,4.8vh);line-height:1.2;letter-spacing:-.02em">把"输入长这样、<br/>输出长这样"的例子<br/>直接喂给它，让它抄</div>
-        <div class="t-body-sm" style="margin-top:auto;color:rgba(250,250,248,.78)">水务里要不要用？我就看一条：这判断是不是又绕、又有行业门道。比如 DMA 漏损怎么算，靠嘴说真说不清。</div>
+        <div class="t-cat on-dark">定义 · DEFINITION</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(2.5vw,4.6vh);line-height:1.18;letter-spacing:-.02em">通过「输入—输出」<br/>范本供 AI 效仿</div>
+        <div class="t-body-sm" style="margin-top:auto;color:rgba(250,250,248,.78)">以下三个案例分别来自设计、design-to-code 与水务告警阈值工作。</div>
       </div>
 
-      <div style="display:grid;grid-template-rows:repeat(3,1fr);gap:1.4vh;min-height:0">
-        <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.8vw;align-items:center;padding:2vh 1.8vw">
-          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">01</div>
+      <div style="display:grid;grid-template-rows:repeat(3,1fr);gap:1.2vh;min-height:0">
+        <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:center;padding:1.6vh 1.6vw">
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7.8vh);line-height:.9;color:var(--accent)">01</div>
           <div>
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em;margin-bottom:.6vh">某种感觉，怎么形容都不对</h4>
+            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(16px,1.25vw);letter-spacing:-.015em;margin-bottom:.4vh">某种感觉，怎么形容都不对</h4>
             <p class="t-body-sm">想要特定的语气和味道，文字描述半天不如直接丢个例子："就照这个来。"</p>
           </div>
         </div>
-        <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.8vw;align-items:center;padding:2vh 1.8vw">
-          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">02</div>
+        <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:center;padding:1.6vh 1.6vw">
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7.8vh);line-height:.9;color:var(--accent)">02</div>
           <div>
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em;margin-bottom:.6vh">同一个坑，它反复踩</h4>
+            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(16px,1.25vw);letter-spacing:-.015em;margin-bottom:.4vh">同一个坑，它反复踩</h4>
             <p class="t-body-sm">把错例和正确答案摆一起给它看，比改上十遍指令都管用。</p>
           </div>
         </div>
-        <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.8vw;align-items:center;padding:2vh 1.8vw">
-          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">03</div>
+        <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:center;padding:1.6vh 1.6vw">
+          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7.8vh);line-height:.9;color:var(--accent)">03</div>
           <div>
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em;margin-bottom:.6vh">行业里的复杂计算</h4>
+            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(16px,1.25vw);letter-spacing:-.015em;margin-bottom:.4vh">行业里的复杂计算</h4>
             <p class="t-body-sm">阈值怎么定、口径怎么算，行有行规。给它走一遍样例，比讲规则快。</p>
           </div>
         </div>
@@ -1359,300 +1395,301 @@
   </div>
 </section>
 
-<!-- ============ 05 · CoT · duo-mirror ============ -->
+<!-- ============ 06 · CoT · duo-mirror ============ -->
 <section class="slide" data-animate="duo-mirror" data-slide-id="cot">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">怎么用 · 05 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">HOW · 怎么用 02 · 06 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">怎么用</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">思维链：让它把"怎么想的"讲出来</h2>
+      <div class="t-cat">HOW · 怎么用</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">Chain of Thought：展示推理过程，也有代价</h2>
     </div>
 
     <div class="duo-compare" style="margin-top:4vh">
       <div class="col accent">
-        <div class="col-tag"><span class="num">适合</span>什么时候好用</div>
-        <h3 class="col-ttl">不只想要答案，<br/>还想知道怎么来的</h3>
-        <p class="col-desc">比如一份 DMA 漏损分析，师傅要看的就是它一步步怎么算的——过程本身就是证据。</p>
+        <div class="col-tag"><span class="num">FIT</span>适合</div>
+        <h3 class="col-ttl">需要看到<br/>推理过程</h3>
+        <p class="col-desc">结论之外，用户还需要了解它如何得出——分析过程本身具有决策价值。</p>
         <ul class="col-list">
-          <li>过程摊在桌上，用户才敢信</li>
+          <li>例：DMA 漏损分析报告，演算过程即是证据</li>
+          <li>过程可见，结论才更可信</li>
         </ul>
       </div>
       <span class="vrule"></span>
       <div class="col">
-        <div class="col-tag"><span class="num">代价</span>什么时候别上头</div>
-        <h3 class="col-ttl">真跑生产，<br/>别太依赖它</h3>
-        <p class="col-desc">看着聪明，账要算清楚。</p>
+        <div class="col-tag"><span class="num">COST</span>代价</div>
+        <h3 class="col-ttl">生产环境<br/>不宜依赖</h3>
+        <p class="col-desc">看似聪明，但每一步推理都意味着成本、延迟与稳定性风险。</p>
         <ul class="col-list">
-          <li>每多想一步都在烧 token，还慢</li>
-          <li>推理是边走边猜，问法一换，结果可能就飘</li>
-          <li>换个模型版本，这套可能又不灵了</li>
+          <li>Token 成本与结果延迟：每次任务都重复分析一遍</li>
+          <li>推理具有探索性，易被噪音带偏，问法不同结果即漂移</li>
+          <li>更换模型版本，同一套 prompt 可能失效</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 06 · CoT 判断标准 · why-now 三列 ============ -->
+<!-- ============ 07 · CoT 判断标准 · why-now 三列 ============ -->
 <section class="slide" data-animate="why-now" data-slide-id="cot-check">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">怎么用 · 06 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">HOW · 怎么用 02 · 07 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">怎么用</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">亮不亮思考过程？先问自己三件事</h2>
+      <div class="t-cat">HOW · 怎么用</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">要不要展示思考过程？先回答三个问题</h2>
     </div>
 
     <div data-anim="up" style="flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:2.4vw;margin-top:6vh">
       <div style="display:flex;flex-direction:column;justify-content:space-between;gap:3vh;border-top:1px solid var(--ink);padding-top:2vh">
         <div>
-          <div class="t-cat">问题 01</div>
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(20px,1.9vw);line-height:1.25;letter-spacing:-.015em;margin:1.2vh 0">用户真的会<br/>看这个过程吗？</h3>
-          <p class="t-body-sm">不会看，就别花钱让它演一遍。</p>
+          <div class="t-cat">QUESTION 01</div>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(20px,1.9vw);line-height:1.25;letter-spacing:-.015em;margin:1.2vh 0">用户是否需要<br/>看到分析过程？</h3>
+          <p class="t-body-sm">需要数据溯源、结论要可核查时，过程才是答案的一部分。</p>
         </div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.9;letter-spacing:-.03em">01</div>
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.9;letter-spacing:-.04em">01</div>
       </div>
       <div style="display:flex;flex-direction:column;justify-content:space-between;gap:3vh;border-top:1px solid var(--ink);padding-top:2vh">
         <div>
-          <div class="t-cat">问题 02</div>
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(20px,1.9vw);line-height:1.25;letter-spacing:-.015em;margin:1.2vh 0">这些思考，<br/>值这个钱吗？</h3>
-          <p class="t-body-sm">token 是真金白银，想清楚了再开。</p>
+          <div class="t-cat">QUESTION 02</div>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(20px,1.9vw);line-height:1.25;letter-spacing:-.015em;margin:1.2vh 0">用户是否愿意<br/>为 CoT 付费？</h3>
+          <p class="t-body-sm">每一步推理都是真实的 token 开销，过程值钱才值得展示。</p>
         </div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.9;letter-spacing:-.03em">02</div>
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.9;letter-spacing:-.04em">02</div>
       </div>
       <div style="display:flex;flex-direction:column;justify-content:space-between;gap:3vh;border-top:2px solid var(--accent);padding-top:2vh">
         <div>
-          <div class="t-cat accent">问题 03</div>
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(20px,1.9vw);line-height:1.25;letter-spacing:-.015em;margin:1.2vh 0">万一结果飘了，<br/>生产受得了吗？</h3>
-          <p class="t-body-sm">受不了，就把过程收进后台，别亮给用户。</p>
+          <div class="t-cat accent">QUESTION 03</div>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(20px,1.9vw);line-height:1.25;letter-spacing:-.015em;margin:1.2vh 0">结果不稳定，<br/>是否会影响生产？</h3>
+          <p class="t-body-sm">会，则将过程收进后台；不会，才可放心向用户展示。</p>
         </div>
-        <div style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.9;letter-spacing:-.03em;color:var(--accent)">03</div>
+        <div style="font-family:var(--sans);font-weight:200;font-size:min(7vw,12vh);line-height:.9;letter-spacing:-.04em;color:var(--accent)">03</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 07 · 越写越长 · stacked-ledger ============ -->
+<!-- ============ 08 · 越写越长 · stacked-ledger（工作场景案例） ============ -->
 <section class="slide" data-animate="stacked-ledger" data-slide-id="bloat">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">什么时候别用 · 07 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">COST · 什么时候别用 01 · 08 / 16</div>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">什么时候别用</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">prompt 越写越长，然后呢？</h2>
+    <div style="display:flex;flex-direction:column;gap:1.2vh">
+      <div class="t-cat">COST · 什么时候别用</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.4vw,8vh)">Prompt 为什么会越写越难维护</h2>
     </div>
 
     <div data-anim="ledger" style="flex:1;display:flex;flex-direction:column;justify-content:center">
-      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.4vh 0;border-bottom:1px solid var(--border-subtle)">
-        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,10vh);line-height:.9;letter-spacing:-.03em">01</div>
+      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em">01</div>
         <div class="ledger-label">
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);letter-spacing:-.015em;margin-bottom:.6vh">补着补着，指令开始打架</h3>
-          <p class="t-body-sm">每出一个新场景就加一条，加着加着互相矛盾，token 还越来越贵。</p>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">指令互相排斥 · 客服话术冲突</h3>
+          <p class="t-body-sm">「投诉先道歉安抚」与「外部责任不得先行认错」并存，同一投诉这轮承诺赔偿、下轮要求保留证据，答复随心情摇摆。</p>
         </div>
         <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--ink)"></span></div>
       </div>
-      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.4vh 0;border-bottom:1px solid var(--border-subtle)">
-        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,10vh);line-height:.9;letter-spacing:-.03em">02</div>
+      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em">02</div>
         <div class="ledger-label">
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);letter-spacing:-.015em;margin-bottom:.6vh">出了问题，查不到是哪句的锅</h3>
-          <p class="t-body-sm">回答是所有指令一起"商量"出来的，到底谁在起作用，测不出来。</p>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">无法归因溯源 · 15 条规则误判一次听漏</h3>
+          <p class="t-body-sm">告警解读叠了 15 条规则，把正常夜间调压判成漏损、自动派单，师傅白跑一趟；输出是合力，无法单独关闭某条做对照。</p>
         </div>
         <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--ink)"></span></div>
       </div>
-      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.4vh 0;border-bottom:1px solid var(--border-subtle)">
-        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.6vw,10vh);line-height:.9;letter-spacing:-.03em">03</div>
+      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em">03</div>
         <div class="ledger-label">
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);letter-spacing:-.015em;margin-bottom:.6vh">一换模型版本，就提心吊胆</h3>
-          <p class="t-body-sm">同一套词，模型一升级可能就变味。越长，越不敢动。</p>
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">换模型可能失效 · 同一份说明书换了执行人</h3>
+          <p class="t-body-sm">模型靠猜测意图工作，并非必然执行；「语气专业」旧版理解为严谨、新版理解为堆砌术语，版本一升级，长 prompt 漂移更远。</p>
         </div>
         <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--ink)"></span></div>
       </div>
-      <div style="display:flex;justify-content:flex-end;padding-top:2.2vh">
-        <div class="t-cat accent">→ 能拆出去的规则，就别硬塞</div>
+      <div style="display:flex;justify-content:flex-end;padding-top:2vh">
+        <div class="t-cat accent">→ 能拆的规则，别都塞进 prompt</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 08 · Prompt vs 程序逻辑 · duo-mirror ============ -->
+<!-- ============ 09 · Prompt vs 程序逻辑 · duo-mirror ============ -->
 <section class="slide" data-animate="duo-mirror" data-slide-id="vs-code">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">边界 · 08 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">BOUNDARY · 边界 01 · 09 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">边界</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">这事该代码干，还是 prompt 干？</h2>
+      <div class="t-cat">BOUNDARY · 边界</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">怎么分工：先看能不能量化</h2>
     </div>
 
     <div class="duo-compare" style="margin-top:4vh">
       <div class="col">
-        <div class="col-tag"><span class="num">CODE</span>算得准、说得清的</div>
-        <h3 class="col-ttl">交给<br/>程序逻辑</h3>
-        <p class="col-desc">能确定算出来的东西，一行都别麻烦模型。</p>
+        <div class="col-tag"><span class="num">CODE</span>程序逻辑</div>
+        <h3 class="col-ttl">确定性 ·<br/>可算清</h3>
+        <p class="col-desc">能用代码进行确定性计算的规则，一条都不必交给模型。</p>
         <ul class="col-list">
-          <li>能写成公式、确定计算的</li>
-          <li>能画成流程图、if-else 的</li>
+          <li>能确定性计算的</li>
+          <li>能画成流程图或 if-else 的</li>
         </ul>
       </div>
       <span class="vrule"></span>
       <div class="col accent">
-        <div class="col-tag"><span class="num">PROMPT</span>说不清、靠感觉的</div>
-        <h3 class="col-ttl">才轮到<br/>prompt</h3>
-        <p class="col-desc">模糊的、给人看的活归它，最好再配几个样例，免得它踩同一个坑。</p>
+        <div class="col-tag"><span class="num">PROMPT</span>Prompt</div>
+        <h3 class="col-ttl">审美 ·<br/>模糊判断</h3>
+        <p class="col-desc">无法量化的部分才属于 prompt，并以范本兜底，避免重复踩坑。</p>
         <ul class="col-list">
-          <li>审美、口味、判断</li>
-          <li>大段自由文本、含糊的话</li>
+          <li>涉及审美、判断等无法量化的指标</li>
+          <li>自由文本与模糊语义输入</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 09 · 使用边界 · grid-reveal 六卡 ============ -->
+<!-- ============ 10 · 使用边界 · grid-reveal 六卡 ============ -->
 <section class="slide" data-animate="grid-reveal" data-slide-id="boundary">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">边界 · 09 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">BOUNDARY · 边界 02 · 10 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">边界</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">五道判断题，决定这事能不能交给 prompt</h2>
+      <div class="t-cat">BOUNDARY · 边界</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">Prompt 使用边界：五道判断题</h2>
     </div>
 
     <div class="sub-grid-3-2" style="margin-top:3.4vh">
       <article class="sub-card">
         <span class="nb-corner">Q1</span>
-        <h4 class="ttl">算错了，会影响真实供水或安全吗？</h4>
-        <p class="desc">会 → <b>代码</b>　不会 → 可以考虑 prompt</p>
+        <h4 class="ttl">输出错误会影响真实供水或安全吗？</h4>
+        <p class="desc">是 → <b>代码</b>　否 → 考虑 prompt</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">Q2</span>
-        <h4 class="ttl">这结果，需要能追到具体数据吗？</h4>
-        <p class="desc">要 → <b>代码</b>　不用 → 可以考虑 prompt</p>
+        <h4 class="ttl">结果是否需要数据溯源？</h4>
+        <p class="desc">是 → <b>代码</b>　否 → 考虑 prompt</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">Q3</span>
-        <h4 class="ttl">这逻辑能画成流程图吗？</h4>
-        <p class="desc">能 → <b>代码</b>　画不出来 → 再想 prompt</p>
+        <h4 class="ttl">逻辑能否画成流程图或 if-else？</h4>
+        <p class="desc">是 → <b>代码</b>　否 → 考虑 prompt</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">Q4</span>
-        <h4 class="ttl">进来的是一段含糊的人话吗？</h4>
-        <p class="desc">是 → <b>考虑 prompt</b>　不是 → 代码</p>
+        <h4 class="ttl">输入是自由文本或模糊语义吗？</h4>
+        <p class="desc">是 → <b>考虑 prompt</b>　否 → 代码</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">Q5</span>
-        <h4 class="ttl">输出是给人看的，不是给系统执行的？</h4>
-        <p class="desc">是 → <b>考虑 prompt</b>　不是 → 代码</p>
+        <h4 class="ttl">输出是给人看，而非给系统执行吗？</h4>
+        <p class="desc">是 → <b>考虑 prompt</b>　否 → 代码</p>
       </article>
       <article class="sub-card ink">
-        <span class="nb-corner">我就记一条</span>
-        <h4 class="ttl">它的回答，会动到真实世界吗？</h4>
-        <p class="desc">会，就别松手——人来拍板。不会，再考虑让 prompt 上。</p>
+        <span class="nb-corner">RULE</span>
+        <h4 class="ttl">总原则</h4>
+        <p class="desc">AI 的输出会不会影响真实世界中人与系统的运行？会，则不适用；不会，才考虑 prompt。</p>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ 10 · 灰色地带 · field-notes 六卡 ============ -->
+<!-- ============ 11 · 灰色地带 · field-notes 六卡 ============ -->
 <section class="slide" data-animate="field-notes" data-slide-id="gray-zone">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">边界 · 10 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">BOUNDARY · 边界 03 · 11 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">边界</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">灰色地带：AI 说话，人按按钮</h2>
-      <p class="lead" style="max-width:58ch">水务里大部分场景都在这条中间线上。AI 负责把事说明白，最后那一下，永远是人来。</p>
+      <div class="t-cat">BOUNDARY · 边界</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">灰色地带：AI 出结果，人来做决定</h2>
+      <p class="lead" style="max-width:58ch">水务业务中最常见的一类场景：AI 将数据翻译成人话，值班人员决定是否按下按钮。</p>
     </div>
 
-    <div data-anim="up" class="sub-grid-3-2" style="margin-top:3.4vh">
+    <div data-anim="up" class="sub-grid-3-2" style="margin-top:3.2vh">
       <div class="card-fill" style="padding:2.2vh 1.6vw;display:flex;flex-direction:column;gap:1vh">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">把一堆监测数据<br/>翻译成人话</div>
-        <div class="t-meta" style="margin-top:auto;text-align:right">告警提示 · AI 出嘴</div>
-      </div>
-      <div class="card-fill" style="padding:2.2vh 1.6vw;display:flex;flex-direction:column;gap:1vh">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">列出几条<br/>可以怎么处置</div>
-        <div class="t-meta" style="margin-top:auto;text-align:right">处置建议 · AI 出嘴</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">将结构化数据<br/>转化为自然语言</div>
+        <div class="t-meta" style="margin-top:auto;text-align:right">告警提示 · AI 输出</div>
       </div>
       <div class="card-fill" style="padding:2.2vh 1.6vw;display:flex;flex-direction:column;gap:1vh">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">整理工单要点、<br/>要带什么耗材</div>
-        <div class="t-meta" style="margin-top:auto;text-align:right">抢修工单 · AI 出嘴</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">给出处置<br/>建议列表</div>
+        <div class="t-meta" style="margin-top:auto;text-align:right">处置建议 · AI 输出</div>
+      </div>
+      <div class="card-fill" style="padding:2.2vh 1.6vw;display:flex;flex-direction:column;gap:1vh">
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">总结工单要点<br/>与维修耗材</div>
+        <div class="t-meta" style="margin-top:auto;text-align:right">抢修工单 · AI 输出</div>
       </div>
       <div class="card-fill" style="padding:2.2vh 1.6vw;display:flex;flex-direction:column;gap:1vh;border-top:2px solid var(--accent)">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">阈值设多少算报警</div>
-        <div class="t-meta" style="margin-top:auto;text-align:right;color:var(--accent)">告警阈值 · 人定</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">设定告警阈值</div>
+        <div class="t-meta" style="margin-top:auto;text-align:right;color:var(--accent)">告警提示 · 人工决策</div>
       </div>
       <div class="card-fill" style="padding:2.2vh 1.6vw;display:flex;flex-direction:column;gap:1vh;border-top:2px solid var(--accent)">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">选哪条建议、<br/>派不派单</div>
-        <div class="t-meta" style="margin-top:auto;text-align:right;color:var(--accent)">处置选择 · 值班员定</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">选择建议<br/>并派单</div>
+        <div class="t-meta" style="margin-top:auto;text-align:right;color:var(--accent)">处置建议 · 人工决策</div>
       </div>
       <div class="card-fill" style="padding:2.2vh 1.6vw;display:flex;flex-direction:column;gap:1vh;border-top:2px solid var(--accent)">
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">这张工单<br/>先派还是后派</div>
-        <div class="t-meta" style="margin-top:auto;text-align:right;color:var(--accent)">工单优先级 · 调度定</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.3vw);line-height:1.35">决定工单优先级<br/>并派单</div>
+        <div class="t-meta" style="margin-top:auto;text-align:right;color:var(--accent)">抢修工单 · 人工决策</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 11 · Streaming · manifesto + ink 通栏 ============ -->
+<!-- ============ 12 · Streaming · manifesto + ink 通栏 ============ -->
 <section class="slide" data-animate="manifesto" data-slide-id="streaming">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">怎么呈现 · 11 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">STREAMING · 呈现 01 · 12 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
-      <div class="t-cat">怎么呈现</div>
-      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(6.4vw,11.5vh);line-height:1.02;letter-spacing:-.03em">边算，边给你看。</div>
+      <div class="t-cat">STREAMING · 怎么呈现</div>
+      <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(6.4vw,11.5vh);line-height:1;letter-spacing:-.03em">边算，边给你看。</div>
     </div>
 
-    <p class="lead" style="max-width:58ch;margin-top:3vh">流式输出说白了：模型还没算完，字已经一个一个往屏幕上蹦了。<br/>ChatGPT 它们，都是这么干的。</p>
+    <p class="lead" style="max-width:58ch;margin-top:3vh">流式输出：服务器将数据边计算边渲染，持续推送给用户——ChatGPT 类产品普遍采用这一方式。</p>
 
     <div data-anim="up" style="margin:auto -5vw -4.4vh;background:var(--ink);color:var(--paper);padding:4.6vh 5vw;display:grid;grid-template-columns:1fr 1fr;gap:3vw">
       <div>
-        <div class="t-cat on-dark">体验 · 为什么这么干</div>
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(18px,1.6vw);line-height:1.5;margin-top:1.2vh">干等转圈最让人焦虑。看到字在动，就知道它没卡死，心里踏实。</div>
+        <div class="t-cat on-dark">体验 · 缓解等待焦虑</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(18px,1.6vw);line-height:1.5;margin-top:1.2vh">实时展现模型的思考过程，用户知道系统仍在工作，焦虑显著降低。</div>
       </div>
       <div>
-        <div class="t-cat on-dark">省钱 · 还有个好处</div>
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(18px,1.6vw);line-height:1.5;margin-top:1.2vh">发现方向不对，随时喊停。停了的那部分，不再算钱。</div>
+        <div class="t-cat on-dark">成本 · 试错可随时中止</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:300;font-size:max(18px,1.6vw);line-height:1.5;margin-top:1.2vh">发现方向偏离可随时停止，已停止的部分不再继续计费。</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 12 · 三种通道 · grid-reveal 三子卡 ============ -->
+<!-- ============ 13 · 三种通道 · grid-reveal 三子卡（含对话举例） ============ -->
 <section class="slide" data-animate="grid-reveal" data-slide-id="channels">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">怎么呈现 · 12 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">STREAMING · 呈现 02 · 13 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">怎么呈现</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">三条管道，别选错</h2>
+      <div class="t-cat">STREAMING · 怎么呈现</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">SSE、WebSocket、HTTP chunk 怎么选</h2>
     </div>
 
-    <div class="sub-grid-3-2" style="grid-template-rows:1fr;margin-top:4vh">
+    <div class="sub-grid-3-2" style="grid-template-rows:1fr;margin-top:3.4vh">
       <article class="sub-card accent">
         <span class="nb-corner">01</span>
         <h4 class="ttl">SSE</h4>
@@ -1672,55 +1709,55 @@
   </div>
 </section>
 
-<!-- ============ 13 · 流式 UI · three-forces ============ -->
+<!-- ============ 14 · 流式 UI · three-forces ============ -->
 <section class="slide" data-animate="three-forces" data-slide-id="stream-ui">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">怎么呈现 · 13 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">STREAMING · 呈现 03 · 14 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
-      <div class="t-cat">怎么呈现</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">字往外蹦的时候，界面得替用户想着</h2>
+      <div class="t-cat">STREAMING · 怎么呈现</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">流式输出，对前端 UI 的三条要求</h2>
     </div>
 
     <div data-anim="up" style="flex:1;display:grid;grid-template-columns:5fr 11fr;gap:1.6vw;margin-top:4vh;min-height:0">
       <div class="card-ink" style="padding:3.4vh 2vw;display:flex;flex-direction:column;gap:2vh;position:relative;overflow:hidden">
         <span class="dot-mat" style="position:absolute;right:-2vw;bottom:-2vw;width:14vw;height:14vw;opacity:.28"></span>
-        <div class="t-cat on-dark">我记住的一句话</div>
-        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(2.6vw,4.8vh);line-height:1.22;letter-spacing:-.02em">别让用户对着<br/>空白屏幕<br/>干等</div>
-        <div class="t-body-sm" style="margin-top:auto;color:rgba(250,250,248,.78)">流式时代，「等待」本身也得设计。每一秒，都得让他知道现在到哪了。</div>
+        <div class="t-cat on-dark">PRINCIPLE · 设计原则</div>
+        <div style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(2.6vw,4.8vh);line-height:1.2;letter-spacing:-.02em">不要让用户<br/>面对空白屏幕<br/>等待</div>
+        <div class="t-body-sm" style="margin-top:auto;color:rgba(250,250,248,.78)">流式时代，「等待」本身成为设计对象：每一秒都要告诉用户系统在做什么。</div>
       </div>
 
       <div style="display:grid;grid-template-rows:repeat(3,1fr);gap:1.4vh;min-height:0">
         <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.8vw;align-items:center;padding:2vh 1.8vw">
           <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">01</div>
           <div style="display:flex;flex-direction:column;gap:.8vh">
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">日常聊天</h4>
+            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">普通对话</h4>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2vw">
-              <div><div class="t-meta" style="margin-bottom:.3vh">用户在意</div><p class="t-body-sm">第一个字要快，"正在想"得有个小动效。</p></div>
-              <div><div class="t-meta" style="margin-bottom:.3vh">前端怎么做</div><p class="t-body-sm">逐字吐，别憋半天甩一大段。</p></div>
+              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">首字延迟不能过高，思考态需有动画微交互。</p></div>
+              <div><div class="t-meta" style="margin-bottom:.3vh">前端重点</div><p class="t-body-sm">逐字吐出，避免思考完成后整段输出。</p></div>
             </div>
           </div>
         </div>
         <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.8vw;align-items:center;padding:2vh 1.8vw">
           <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">02</div>
           <div style="display:flex;flex-direction:column;gap:.8vh">
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">生成文件</h4>
+            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">输出文件</h4>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2vw">
-              <div><div class="t-meta" style="margin-bottom:.3vh">用户在意</div><p class="t-body-sm">表格、图表，最后得是看得懂的样子。</p></div>
-              <div><div class="t-meta" style="margin-bottom:.3vh">前端怎么做</div><p class="t-body-sm">先上骨架占位，代码写完再渲染图表。</p></div>
+              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">结构化结果以可视化呈现，提升可读性。</p></div>
+              <div><div class="t-meta" style="margin-bottom:.3vh">前端重点</div><p class="t-body-sm">先给占位骨架，代码完整后再渲染图表。</p></div>
             </div>
           </div>
         </div>
         <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.8vw;align-items:center;padding:2vh 1.8vw">
           <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">03</div>
           <div style="display:flex;flex-direction:column;gap:.8vh">
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">状态要看得见</h4>
+            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">状态可见</h4>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2vw">
-              <div><div class="t-meta" style="margin-bottom:.3vh">用户在意</div><p class="t-body-sm">出错、中断都明明白白，才敢信你。</p></div>
-              <div><div class="t-meta" style="margin-bottom:.3vh">前端怎么做</div><p class="t-body-sm">说人话报错，中断就标"已停止生成"。</p></div>
+              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">出错、中断状态可见并可操作，增强信任。</p></div>
+              <div><div class="t-meta" style="margin-bottom:.3vh">前端重点</div><p class="t-body-sm">白话标记出错，中断标记「已停止生成」。</p></div>
             </div>
           </div>
         </div>
@@ -1729,48 +1766,48 @@
   </div>
 </section>
 
-<!-- ============ 14 · 中断处理 · four-cards ============ -->
+<!-- ============ 15 · 中断处理 · four-cards ============ -->
 <section class="slide" data-animate="four-cards" data-slide-id="stream-stop">
   <div class="canvas-card">
     <div class="chrome-min">
-      <div class="l">学习笔记 · PROMPT × STREAMING</div>
-      <div class="r">怎么呈现 · 14 / 15</div>
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">STREAMING · 呈现 04 · 15 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.8vh">
       <div style="width:80px;height:2px;background:var(--accent)"></div>
       <div style="display:flex;flex-direction:column;gap:1.2vh">
-        <div class="t-cat">怎么呈现</div>
-        <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">用户点了「停止」之后</h2>
+        <div class="t-cat">STREAMING · 怎么呈现</div>
+        <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">中途停止生成，怎么处理</h2>
       </div>
     </div>
 
     <div data-anim="up" style="flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:1.6vw;margin-top:5vh;align-items:start">
       <div style="border-top:1px solid var(--ink);padding-top:1.8vh">
-        <div class="t-meta">— 01 / 秒停</div>
-        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">界面马上停</h3>
-        <p class="t-body-sm">手指点下去就得有反应，不能连"停止"自己都在排队。</p>
+        <div class="t-meta">— 01 / STOP</div>
+        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">秒级响应</h3>
+        <p class="t-body-sm">点击中断后前端立即停止，「停止」按钮自身不能进入排队。</p>
       </div>
       <div style="border-top:1px solid var(--ink);padding-top:1.8vh">
-        <div class="t-meta">— 02 / 留底</div>
-        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">已写的别删</h3>
-        <p class="t-body-sm">写了多少留多少，标一句"已停止生成"就行。</p>
+        <div class="t-meta">— 02 / KEEP</div>
+        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">保留并标记</h3>
+        <p class="t-body-sm">已生成内容完整保留，明确标记「已停止生成」。</p>
       </div>
       <div style="border-top:1px solid var(--ink);padding-top:1.8vh">
-        <div class="t-meta">— 03 / 说人话</div>
-        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">告诉它怎么了</h3>
-        <p class="t-body-sm">用大白话说发生了什么，别甩一堆错误码给用户猜。</p>
+        <div class="t-meta">— 03 / TELL</div>
+        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">白话告知</h3>
+        <p class="t-body-sm">用日常语言说明发生了什么，避免向用户抛出错误代码。</p>
       </div>
       <div style="border-top:2px solid var(--accent);padding-top:1.8vh">
-        <div class="t-meta" style="color:var(--accent)">— 04 / 给后路</div>
-        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">下一步能干嘛</h3>
-        <p class="t-body-sm">继续生成、重新提问、复制内容——别把人逼到死角。</p>
+        <div class="t-meta" style="color:var(--accent)">— 04 / NEXT</div>
+        <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">给出下一步</h3>
+        <p class="t-body-sm">提供继续生成、重新提问、复制内容，用户始终有路可走。</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ 15 · Closing Manifesto · 左 accent+ASCII / 右白底 takeaway ============ -->
+<!-- ============ 16 · Closing Manifesto · 左 accent+ASCII / 右白底 takeaway ============ -->
 <section class="slide split" data-animate="split-statement" data-slide-id="closing">
   <div class="canvas-card">
     <div class="split-half">
@@ -1778,14 +1815,14 @@
       <div class="half b-accent" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between;position:relative;overflow:hidden">
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
         <div class="chrome-min" style="margin-bottom:0;position:relative;z-index:1">
-          <div class="l">15 / 15</div>
+          <div class="l">16 / 16</div>
           <div class="r">CLOSING</div>
         </div>
 
         <div data-anim="manifesto" style="display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
-          <div class="t-meta" style="color:rgba(6,51,59,.78);letter-spacing:.22em;margin-bottom:1.6vh">最后一句话</div>
-          <h2 style="font-family:var(--sans),var(--sans-zh);font-size:min(8vw,14vh);line-height:.98;letter-spacing:-.025em;font-weight:200;color:var(--accent-on)">写 prompt，<br/>就是划<span style="font-style:italic;font-weight:300">边界</span>。</h2>
-          <div style="font-family:var(--sans),var(--sans-zh);font-size:max(14px,1vw);line-height:1.6;color:rgba(6,51,59,.84);font-weight:400;max-width:36ch;margin-top:1.4vh">AI 帮我们把局面照亮，按钮，永远在人手里。</div>
+          <div class="t-meta" style="color:rgba(6,51,59,.78);letter-spacing:.22em;margin-bottom:1.6vh">MANIFESTO</div>
+          <h2 style="font-family:var(--sans),var(--sans-zh);font-size:min(8vw,14vh);line-height:.96;letter-spacing:-.025em;font-weight:200;color:var(--accent-on)">写 Prompt，<br/>就是划<span style="font-style:italic;font-weight:300">边界</span>。</h2>
+          <div style="font-family:var(--sans),var(--sans-zh);font-size:max(13px,1vw);line-height:1.6;color:rgba(6,51,59,.84);font-weight:400;max-width:36ch;margin-top:1.4vh">Prompt 照亮判断，而按下按钮的，始终是人。</div>
         </div>
 
         <div data-anim="signature" style="display:flex;justify-content:space-between;align-items:end;border-top:1px solid rgba(6,51,59,.25);padding-top:2vh;position:relative;z-index:1">
@@ -1798,7 +1835,7 @@
       <div class="half" style="padding:5.6vh 3.6vw 4.4vh;justify-content:space-between">
         <div class="chrome-min">
           <div class="l">TAKEAWAYS</div>
-          <div class="r">三条带走</div>
+          <div class="r">03 RULES</div>
         </div>
 
         <div data-anim="rules" style="display:flex;flex-direction:column">
@@ -1806,28 +1843,28 @@
             <li style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
               <div style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--text-primary)">01</div>
               <div>
-                <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--text-primary);margin-bottom:1vh">算得清的，交给代码</h3>
-                <p style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary);font-weight:400">阈值、公式、流程图，别让模型硬背。</p>
+                <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--text-primary);margin-bottom:1vh">能算清的，交给代码</h3>
+                <p style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary);font-weight:400">阈值、溯源、流程图，不要让 prompt 硬背。</p>
               </div>
             </li>
             <li style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.6vh 0;border-top:1px solid var(--border-subtle)">
               <div style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--text-primary)">02</div>
               <div>
-                <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--text-primary);margin-bottom:1vh">说不清的，再找 prompt</h3>
-                <p style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary);font-weight:400">配几个样例兜底，也别迷信它次次都稳。</p>
+                <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--text-primary);margin-bottom:1vh">说不清的，再交给 prompt</h3>
+                <p style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary);font-weight:400">以 few-shot 范本兜底，不假设它永远稳定。</p>
               </div>
             </li>
             <li style="display:grid;grid-template-columns:auto 1fr;gap:2vw;align-items:start;padding:2.6vh 0;border-top:1px solid var(--border-subtle);border-bottom:2px solid var(--accent)">
               <div style="font-family:var(--sans);font-weight:200;font-size:min(4.4vw,7.8vh);line-height:.9;color:var(--accent)">03</div>
               <div>
-                <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--accent);margin-bottom:1vh">拿不准的，留给人</h3>
-                <p style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary);font-weight:400">AI 出主意，老师傅拍板。少跑一趟冤枉路，就少挨一句投诉。</p>
+                <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.8vw);line-height:1.2;letter-spacing:-.015em;color:var(--accent);margin-bottom:1vh">灰色地带，留给人</h3>
+                <p style="font-family:var(--sans),var(--sans-zh);font-size:max(16px,.94vw);line-height:1.6;color:var(--text-secondary);font-weight:400">AI 出建议，师傅做决定——让一线少跑冤枉路、少挨投诉。</p>
               </div>
             </li>
           </ul>
         </div>
 
-        <div data-anim="foot" class="t-meta" style="color:var(--text-helper);text-align:right">→ 完 · 谢谢听我碎碎念</div>
+        <div data-anim="foot" class="t-meta" style="color:var(--text-helper);text-align:right">→ 完 · END OF FIELD NOTE</div>
       </div>
     </div>
   </div>
@@ -1841,94 +1878,118 @@
 <script>
 const SPEAKER_NOTES = [
   {
-    id: 'cover', title: '写给模型的话', section: '开场', minutes: 0.5,
-    purpose: '轻松开场，告诉大家这是个人学习笔记',
-    talk: ['说明这是自己边学边记的，不是教科书', '全场两件事：怎么跟 AI 说话，流式输出时界面怎么设计'],
-    transition: '先把结论甩出来', cue: '等观众看清封面再翻'
+    id: 'cover', title: 'Prompt 是什么', section: '开场', minutes: 0.5,
+    purpose: '建立主题与现场预期',
+    talk: ['一份关于 Prompt 与流式输出的学习笔记', '副标题点题：写给模型的指令，也是写给自己的设计判断'],
+    transition: '先给全场唯一主线', cue: '停顿，确认观众屏已同步'
   },
   {
-    id: 'thesis', title: 'prompt 不是咒语，是边界', section: '先说结论', minutes: 0.8,
-    purpose: '立住全场主线',
-    talk: ['坦白自己以前的误区：以为写得越长越厉害', '其实每句话都在回答：这事谁拍板，模型还是人'],
-    transition: '从最基础的「它是什么」讲起', cue: '「划边界」三个字放慢'
+    id: 'thesis', title: 'Prompt 不是咒语，是边界', section: '核心判断', minutes: 0.8,
+    purpose: '抛出全场主线：指令的本质是划分人机决定权',
+    talk: ['强调「边界」而非「技巧」', '每段指令都在回答：什么交给机器，什么留给人'],
+    transition: '从最基本的「是什么」讲起', cue: '在「边界」一词上停顿'
   },
   {
-    id: 'three-kinds', title: 'prompt 也分三层', section: '是什么', minutes: 1.0,
-    purpose: '讲清 System / User / Developer 各管什么',
-    talk: ['System 是长期人设，像给新同事写岗位说明书', 'User 是我们每天真正写的那句任务', 'Developer 是程序员管的规矩，常识不用写'],
-    transition: '知道三层之后，看两个好用的写法', cue: '岗位说明书的比喻可以展开一句'
+    id: 'three-kinds', title: '三类 Prompt：谁负责什么', section: '是什么', minutes: 1.0,
+    purpose: '讲清 System / User / Developer 的分工',
+    talk: ['System 是岗位说明书，长期生效', 'User 是一次对话里的具体任务', 'Developer 是技术与工程规矩，不写常识'],
+    transition: '下一页用真实 system prompt 展开第一层', cue: '岗位说明书的比喻放慢'
   },
   {
-    id: 'few-shot', title: 'Few-shot：给样例', section: '怎么用', minutes: 1.2,
-    purpose: '解释什么是 few-shot、什么时候用',
-    talk: ['一句话：例子直接喂给它，让它抄', '三个场景讲完，落到 DMA：靠嘴说不清，就给样例'],
-    transition: '第二个写法是思维链', cue: 'DMA 处放慢，这是全场反复出现的例子'
+    id: 'system-breakdown', title: '一份真实 System prompt 的两层结构', section: '是什么', minutes: 1.2,
+    purpose: '用本 deck 实际使用的 system prompt 示范角色设定与角色性格的区别',
+    talk: ['左栏角色设定：身份、服务对象、工作范围、立场', '右栏角色性格：审美总纲、表达规则、温度与洁癖', '点题：通篇没有「要有礼貌」这类常识——常识不占 prompt 位置'],
+    transition: '知道怎么立角色之后，看两个具体写法', cue: '可以指屏幕左右两栏对照讲'
   },
   {
-    id: 'cot', title: '思维链：把怎么想的讲出来', section: '怎么用', minutes: 1.2,
-    purpose: '对照 CoT 的好用之处和代价',
-    talk: ['好用：过程本身是证据，比如漏损分析', '代价：烧 token、会飘、换模型可能失灵', '强调不是不让用，是生产别依赖'],
-    transition: '那到底什么时候用？三个问题', cue: '左右对照时用手指一下屏幕'
+    id: 'few-shot', title: 'Few-shot：给范本，比讲道理快', section: '怎么用', minutes: 1.4,
+    purpose: '用三个工作案例说明 few-shot 的适用场景',
+    talk: ['案例一设计视角：告警语气难以描述，直接给输入输出范本', '案例二 design-to-code：圆角阴影屡教不改，范本比要求有效', '案例三 DMA 阈值：三行数据→判定样例，模型自己学到连续性、倍数、突增；数值是示例口径'],
+    fallback: [
+      '案例一完整范本（设计视角）——输入：泵站 3 号机组电流过载，持续 12 分钟；输出：3 号机组电流偏高一阵子了，先看下现场画面，再决定切不切泵。',
+      '输入：DMA-07 夜间最小流量连续 3 天超基线 50%；输出：07 片区这几晚用水量不太对，可能有暗漏，建议明天先安排听漏。',
+      '再给「余氯 0.25mg/L，低于下限 0.3」时，它照味道写出「余氯有点偏低了，先查下加药间是不是药量没跟上」——味道是抄会的，不是被「专业且人性化」教会的。',
+      '案例二完整范本（design-to-code）——卡片：直角 border-radius:0、无阴影、描边只用 var(--border-subtle)，不新增颜色值；按钮：背景 var(--accent)、文字 var(--accent-on)，禁止自加渐变、禁止 hover 放大。从「提要求」变为「示范成品」。',
+      '案例三完整范本（DMA 阈值，示例数据待业务核对）——三晚最小流量 13/14/12.5、基线 12：正常不告警（未超 1.25 倍）；19/20.5/18.5：黄色预警疑似漏损（连续 3 晚 ≥ 1.5 倍）；前两晚正常、某晚突增 31：橙色告警先排查爆管或施工，不直接判漏损。',
+      '关键提醒：这套样例只让 AI 出建议，阈值与派单仍由人定。'
+    ],
+    transition: '第二个写法是思维链，它代价更大', cue: '第三个案例放慢，说明阈值仍由人定'
   },
   {
-    id: 'cot-check', title: '亮不亮思考过程的三个问题', section: '怎么用', minutes: 1.0,
-    purpose: '给出可操作的判断标准',
-    talk: ['看不看、值不值、飘了受不受得了', '第三条是底线，用高亮色讲'],
-    transition: '思维链会越写越长，推广到一个更大的坑', cue: '每条停半秒'
+    id: 'cot', title: 'Chain of Thought：展示推理过程，也有代价', section: '怎么用', minutes: 1.2,
+    purpose: '对照 CoT 的适用场景与生产代价',
+    talk: ['适用：过程本身有决策价值，如漏损分析报告', '代价：token 与延迟、推理易被噪音带偏、换模型可能失效', '不是不要用，而是生产环境不要依赖'],
+    transition: '什么时候值得用？三个问题', cue: '左右对照时配合手势'
   },
   {
-    id: 'bloat', title: 'prompt 越写越长，然后呢', section: '什么时候别用', minutes: 1.0,
-    purpose: '讲长 prompt 的三个真实麻烦',
-    talk: ['补场景补出矛盾，还越来越贵', '出问题查不到是哪句的锅', '换模型版本就提心吊胆'],
-    transition: '那活到底怎么分', cue: '「查不到锅」用聊天语气讲'
+    id: 'cot-check', title: '要不要展示思考过程？先回答三个问题', section: '怎么用', minutes: 1.0,
+    purpose: '给出 CoT 的可操作判断标准',
+    talk: ['需不需要过程、愿不愿付费、不稳定会不会影响生产', '第三问是底线，用 accent 强调'],
+    transition: '越长越贵的写法推广到一般规律', cue: '读完第三问停 2 秒'
   },
   {
-    id: 'vs-code', title: '该代码干还是 prompt 干', section: '边界', minutes: 1.0,
-    purpose: '划清程序逻辑和 prompt 的分工',
-    talk: ['算得准、能画流程图的，代码一行都别让', '审美、含糊话才归 prompt，再配样例'],
-    transition: '把这条线落成五道判断题', cue: '「一行都别麻烦模型」这句可以重一点'
+    id: 'bloat', title: 'Prompt 为什么会越写越难维护', section: '什么时候别用', minutes: 1.4,
+    purpose: '用三个工作场景解释长 prompt 的结构性问题',
+    talk: ['客服话术：安抚与外部责任不认责两条规矩并存，同一投诉两种答复', '15 条告警规则合力误判夜间调压为漏损，师傅白跑，无法单条归因', '换模型如换执行人：「专业」旧版理解为严谨，新版理解为堆术语'],
+    fallback: [
+      '情况一完整案例（客服话术冲突）——旧规矩：「用户投诉时先道歉、安抚情绪」；新规矩（爆管工单吃过亏后补的）：「涉及外部责任的工单，不得先行认错或承诺赔偿」。用户说「你们管子爆了淹了我家地板！」时，输出 A 命中旧规矩：「非常抱歉给您造成了损失，我们一定会负责赔偿……」；输出 B 命中新规矩：「事故原因正在核实，建议您先保留现场照片……」。同一投诉两种答复轮着出现，投诉被放大。',
+      '情况二完整案例（无法归因）——告警解读 prompt 叠了 15 条规则：宁错报勿漏报、连续 3 晚偏高即疑似漏损、参考相似 DMA 历史、结合近期施工记录……。某天把一次正常夜间调压判成漏损并自动派单，师傅白跑一趟。排查时每条都删不动：删激进的怕真漏报；改阈值怕影响所有 DMA；怀疑相似 DMA 找错参照也无法验证。结论：规则叠到无法归因时不要再打补丁，拆——确定性判断移到代码，prompt 只留「说人话」那一层。',
+      '情况三补充解释（换模型为什么失灵）——prompt 不是程序，模型每次都在猜「这么写的人最可能想要什么」。升级等于换了语感不同的新员工：「语气专业一点」，旧版理解成严谨克制，新版理解成多堆术语；有些旧 prompt 当年甚至利用了老模型的小脾气或 bug，新版一改，咒语自然失效。应对：关键要求用 few-shot 锚定、换模型后重要场景回归测一遍。'
+    ],
+    transition: '规则该拆到哪里去？看分工', cue: '白跑一趟是重点，讲出代价'
   },
   {
-    id: 'boundary', title: '五道判断题', section: '边界', minutes: 1.2,
-    purpose: '给一份能直接拿去用的 checklist',
-    talk: ['前三题答是交给代码，后两题答是才考虑 prompt', '最后黑卡那句最要紧：会动到真实世界，就别松手'],
-    transition: '但现实不是非黑即白', cue: '五题快速过，黑卡放慢'
+    id: 'vs-code', title: '怎么分工：先看能不能量化', section: '边界', minutes: 1.0,
+    purpose: '划分程序逻辑与 prompt 的职责线',
+    talk: ['能确定性计算、能画流程图的交给代码', '审美、模糊语义才是 prompt 的活，并提供样本'],
+    transition: '把分工落成五道判断题', cue: '「一条都不必交给模型」可重读'
   },
   {
-    id: 'gray-zone', title: '灰色地带：AI 说话，人按按钮', section: '边界', minutes: 1.2,
-    purpose: '用水务三个场景讲人机怎么配合',
-    talk: ['上排 AI 出嘴：说人话、列建议、整工单', '下排人出手：阈值、派单、优先级', '现场安全和责任，永远留给人'],
-    transition: '内容讲完，接着讲这些话怎么呈现给用户', cue: '「最后那一下永远是人」说完再翻'
+    id: 'boundary', title: 'Prompt 使用边界：五道判断题', section: '边界', minutes: 1.2,
+    purpose: '给出可执行的边界 checklist',
+    talk: ['前三题答是→代码，后两题答是→考虑 prompt', '黑卡总原则：会不会影响真实世界运行'],
+    transition: '但现实更多在中间地带', cue: '五题快速过，总原则放慢'
   },
   {
-    id: 'streaming', title: '边算边给你看', section: '怎么呈现', minutes: 0.8,
-    purpose: '定义流式输出和两个理由',
-    talk: ['字一个个往外蹦，就是流式', '一是不焦虑，二是能随时停、停了不算钱'],
-    transition: '实现上有三条管道', cue: '黑条出现时停一下'
+    id: 'gray-zone', title: '灰色地带：AI 出结果，人来做决定', section: '边界', minutes: 1.2,
+    purpose: '用水务三个场景说明人机协作',
+    talk: ['上排 AI 输出：告警人话、建议列表、工单摘要', '下排人工决策：阈值、派单选择、优先级', '涉及现场安全与责任的动作永远留给人'],
+    transition: '内容边界讲完，进入呈现层', cue: '「师傅决定按不按下去」点题'
   },
   {
-    id: 'channels', title: '三条管道别选错', section: '怎么呈现', minutes: 1.0,
-    purpose: '对比 SSE / WebSocket / HTTP chunk',
-    talk: ['SSE 单向能掐断，聊天最常用，高亮它', 'WebSocket 有来有回，语音和协作用', 'HTTP chunk 用来给完整报告'],
-    transition: '管道选好了，界面要跟上', cue: '从高亮的 SSE 讲起'
+    id: 'streaming', title: '边算，边给你看', section: '怎么呈现', minutes: 0.8,
+    purpose: '定义流式输出及两个理由',
+    talk: ['边算边渲染边推送', '体验：实时看到思考，降低焦虑', '成本：随时停止，停止部分不计费'],
+    transition: '实现上有三条通道', cue: '黑条出现时稍停'
   },
   {
-    id: 'stream-ui', title: '字往外蹦时界面要替用户想', section: '怎么呈现', minutes: 1.2,
-    purpose: '把流式体验落成三条前端要求',
-    talk: ['聊天：首字快、逐字吐', '文件：先骨架后渲染', '状态：出错中断说人话', '核心一句：别让人对着空白屏幕干等'],
-    transition: '还有一个躲不掉的场景：停止', cue: '左边黑卡那句话先读'
+    id: 'channels', title: 'SSE、WebSocket、HTTP chunk 怎么选', section: '怎么呈现', minutes: 1.1,
+    purpose: '用值班员小张的三个对话区分三条通道',
+    talk: ['SSE 像对讲机：单向可中断，对话和告警用它', 'WebSocket 像打电话：双向可插话，语音转写和协同', 'HTTP chunk 像盖章报告：先骨架后成品，报告与复盘'],
+    fallback: [
+      'SSE 对话脚本（像对讲机广播）——小张：「帮我总结一下 DMA-07 昨晚的流量情况。」AI（字一个个蹦）：「昨·晚·07·片·区·最·小·流·量……」小张一眼看出方向不对：「停！」AI 立刻停住，已写的字保留，末尾标「已停止生成」。服务器只说不听，一条单向通道，随时可切断。',
+      'WebSocket 对话脚本（像打电话）——小张戴耳机边看现场边说：「今日下午三点，07 片区……」屏幕边说边出字；他突然想起：「等下，把下午改成上午。」屏幕立刻改为「今日上午三点」，不用等说完、也不用重新提问。双方随时能插话。',
+      'HTTP chunk 对话脚本（像等一份盖章报告）——小张：「生成一份上周漏损分析周报。」界面先出现骨架：封面、图表占位框在转；内容一块块送达，代码块完整后图表一次性渲染，最终是一份可直接转发的完整周报。中途想加需求只能重新提一次。'
+    ],
+    transition: '通道选定后，界面要跟上', cue: 'SSE 高亮，从它讲起'
   },
   {
-    id: 'stream-stop', title: '点了停止之后', section: '怎么呈现', minutes: 1.0,
-    purpose: '讲中断处理的四个动作',
-    talk: ['马上停、东西留着、说人话、给条后路', '第四条是给用户安全感：永远有路可走'],
-    transition: '收个尾', cue: '四个词：秒停、留底、说人话、给后路'
+    id: 'stream-ui', title: '流式输出，对前端 UI 的三条要求', section: '怎么呈现', minutes: 1.2,
+    purpose: '把流式体验落成前端要求',
+    talk: ['对话：首字快、逐字吐', '文件：先骨架后渲染', '状态：出错中断白话可见', '核心：别让用户面对空白屏幕'],
+    transition: '还有一个必经场景：停止', cue: '左侧黑卡原则先读'
   },
   {
-    id: 'closing', title: '写 prompt 就是划边界', section: '收尾', minutes: 0.8,
-    purpose: '回扣主线，留三句话给观众带走',
-    talk: ['回扣第二页：不是咒语，是边界', '三条连起来：算得清的给代码、说不清的找 prompt、拿不准的留给人', '落到现场：少跑冤枉路，少挨投诉'],
-    transition: '结束，提问', cue: '停两秒再说谢谢'
+    id: 'stream-stop', title: '中途停止生成，怎么处理', section: '怎么呈现', minutes: 1.0,
+    purpose: '给出中断处理的四个动作',
+    talk: ['秒级响应、保留并标记、白话告知、给出下一步', '第四条建立信任：用户永远有路可走'],
+    transition: '收束全场', cue: '四条各停半秒'
+  },
+  {
+    id: 'closing', title: '写 Prompt，就是划边界', section: '收束', minutes: 0.8,
+    purpose: '回扣主线并留下三条规则',
+    talk: ['回扣第 2 页：不是咒语，是边界', '三条连成判断：代码—prompt—人', '落到现场：少跑冤枉路，少挨投诉'],
+    transition: '结束演讲，进入提问', cue: '停顿 2 秒后致谢'
   }
 ];
 window.__SPEAKER_NOTES__ = SPEAKER_NOTES;
