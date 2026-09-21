@@ -1220,7 +1220,7 @@
 </script>
 
 <canvas id="bg-grid" class="bg"></canvas>
-<div id="hint" role="toolbar" aria-label="快捷控制">
+<div id="hint" role="toolbar" aria-label="快捷控制" style="display:none" hidden>
   <span>← → 翻页</span><span class="ppt-sep">·</span>
   <button id="ppt-low-power-btn" type="button"><span class="ppt-key">B</span><span class="ppt-low-power-label">静态</span></button><span class="ppt-sep">·</span>
   <button id="ppt-overview-btn" type="button"><span class="ppt-key">ESC</span>总览</button><span class="ppt-sep">·</span>
@@ -1229,13 +1229,12 @@
 
 <div id="deck">
 
-<!-- ============ 01 · Cover · 满屏 accent + ASCII 呼吸场 ============ -->
 <section class="slide accent" data-animate="hero" data-slide-id="cover">
   <div class="canvas-card">
     <canvas class="ascii-bg" aria-hidden="true"></canvas>
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">STACY · 2026.07 · 01 / 16</div>
+      <div class="r">01 / 16</div>
     </div>
 
     <div style="flex:1;padding:0;display:grid;grid-template-rows:auto 1fr auto;gap:2.6vh">
@@ -1254,32 +1253,11 @@
   </div>
 </section>
 
-<!-- ============ 02 · Thesis · 点阵宣言 statement ============ -->
-<section class="slide" data-animate="statement" data-slide-id="thesis">
-  <div class="canvas-card">
-    <div class="chrome-min">
-      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">CORE IDEA · 02 / 16</div>
-    </div>
-    <span class="dot-mat lg" style="position:absolute;right:0;top:0;width:34vw;height:34vw"></span>
-    <span class="ring-mat" style="position:absolute;left:5vw;bottom:6vh;width:15vw;height:15vw"></span>
-
-    <div data-anim="line" class="t-cat accent" style="margin-top:6vh">核心判断 · THE THESIS</div>
-    <h1 data-anim="up" style="font-family:var(--sans),var(--sans-zh);font-weight:200;font-size:min(8.2vw,14vh);line-height:1.04;letter-spacing:-.03em;margin-top:2.4vh">Prompt 不是咒语，<br/>是<span style="font-style:italic;font-weight:300">边界</span>。</h1>
-
-    <div data-anim="up" style="margin-top:auto;display:flex;justify-content:space-between;align-items:end;gap:3vw;border-top:1px solid var(--border-subtle);padding-top:2vh">
-      <div class="lead" style="max-width:56ch">每一段指令，本质上都在划同一条线：什么交给机器，什么留给人。<br/>这份笔记从头到尾，只回答这一个问题。</div>
-      <div class="t-meta" style="white-space:nowrap">— 全场主线</div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 03 · 三类 Prompt · grid-reveal 三子卡 ============ -->
 <section class="slide" data-animate="grid-reveal" data-slide-id="three-kinds">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">WHAT · 是什么 01 · 03 / 16</div>
+      <div class="r">02 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1292,28 +1270,69 @@
       <article class="sub-card">
         <span class="nb-corner">01</span>
         <h4 class="ttl">System · 定角色</h4>
-        <p class="desc">级别最高的长期规则，作用于每一次对话。划定 AI 的身份、能力边界与语气品味，相当于一份岗位说明书。</p>
+        <p class="desc">级别最高的长期规则，作用于每一次对话。划定 AI 的身份、能力边界与语气品味，相当于一份岗位说明书。</p><p class="desc" style="margin-top:.8vh;border-top:1px solid var(--border-subtle);padding-top:.8vh"><span style="font-family:var(--mono);letter-spacing:.08em">用效周期</span><br>长期风格模版
       </article>
       <article class="sub-card">
         <span class="nb-corner">02</span>
         <h4 class="ttl">User · 下任务</h4>
-        <p class="desc">一次对话中的具体指令：总结、生成、判断。最常被书写的一类，越具体，结果越可靠。</p>
+        <p class="desc">一次对话中的具体指令：总结、生成、判断。最常被书写的一类，越具体，结果越可靠。</p><p class="desc" style="margin-top:.8vh;border-top:1px solid var(--border-subtle);padding-top:.8vh"><span style="font-family:var(--mono);letter-spacing:.08em">用效周期</span><br>本次任务输出模版
       </article>
       <article class="sub-card">
         <span class="nb-corner">03</span>
         <h4 class="ttl">Developer · 立规矩</h4>
-        <p class="desc">技术要求、工具使用规范与工程约束，让输出更有秩序；常识性规则不必写入。</p>
+        <p class="desc">技术要求、工具使用规范与工程约束，让输出更有秩序；常识性规则不必写入。</p><p class="desc" style="margin-top:.8vh;border-top:1px solid var(--border-subtle);padding-top:.8vh"><span style="font-family:var(--mono);letter-spacing:.08em">用效周期</span><br>技术格式模版
       </article>
     </div>
   </div>
 </section>
 
-<!-- ============ 04 · System prompt 实例拆解（新增）· duo-mirror ============ -->
+<section class="slide" data-animate="grid-reveal" data-slide-id="prompt-relations">
+  <div class="canvas-card">
+    <div class="chrome-min">
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">WHAT · 是什么 02 · 03 / 16</div>
+    </div>
+
+    <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
+      <div class="t-cat">WHAT · 是什么</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.2vw,7.6vh)">三类 Prompt 如何协作：同一次请求的三层</h2>
+      <p class="lead" style="max-width:62ch">三层不是三选一，而是由外到内一起作用：Developer 管格式、System 管风格、User 管这次要什么——越往里越具体。</p>
+    </div>
+
+    <div data-anim="up" style="flex:1;display:flex;align-items:center;justify-content:center;margin-top:1vh">
+      <svg viewBox="0 0 960 432" width="92%" role="img" aria-labelledby="prn-title prn-desc" style="overflow:visible">
+        <title id="prn-title">三类提示词嵌套关系图</title>
+        <desc id="prn-desc">Developer instruction 作为最外层规定技术格式，System prompt 居中贯穿身份与风格，User prompt 在最内层承载本次具体任务，三层嵌套共同产生一次回答。</desc>
+
+        <!-- 最外层 Developer：最淡 -->
+        <rect x="48" y="48" width="864" height="336" rx="8" fill="none" stroke="#0a0a0a" stroke-width="1" opacity="0.35"/>
+        <rect x="72" y="36" width="264" height="24" fill="#fafaf8"/>
+        <text x="84" y="52" font-family="'JetBrains Mono','IBM Plex Mono',monospace" font-size="12" letter-spacing="0.12em" fill="#0a0a0a" opacity="0.6">DEVELOPER · 技术格式模版</text>
+        <text x="876" y="76" text-anchor="end" font-family="var(--sans),var(--sans-zh)" font-size="12" fill="#0a0a0a" opacity="0.4">约束输出长什么样</text>
+
+        <!-- 中层 System：青色描边 -->
+        <rect x="136" y="108" width="688" height="240" rx="8" fill="rgba(84,192,209,0.05)" stroke="#54c0d1" stroke-width="1.2" opacity="0.95"/>
+        <rect x="160" y="96" width="252" height="24" fill="#fafaf8"/>
+        <text x="172" y="112" font-family="'JetBrains Mono','IBM Plex Mono',monospace" font-size="12" letter-spacing="0.12em" fill="#54c0d1">SYSTEM · 长期风格模版</text>
+        <text x="788" y="136" text-anchor="end" font-family="var(--sans),var(--sans-zh)" font-size="12" fill="#0a0a0a" opacity="0.4">决定以什么身份与腔调回答</text>
+
+        <!-- 最内层 User：最深、青色填充焦点 -->
+        <rect x="224" y="176" width="512" height="128" rx="8" fill="rgba(84,192,209,0.14)" stroke="#54c0d1" stroke-width="1.6"/>
+        <rect x="248" y="164" width="252" height="24" fill="#fafaf8"/>
+        <text x="260" y="180" font-family="'JetBrains Mono','IBM Plex Mono',monospace" font-size="12" letter-spacing="0.12em" fill="#06333b">USER · 本次任务输出模版</text>
+        <text x="260" y="216" font-family="var(--sans),var(--sans-zh)" font-size="16" font-weight="500" fill="#0a0a0a">「帮我总结 DMA-07 昨晚的流量情况」</text>
+        <text x="260" y="248" font-family="var(--sans),var(--sans-zh)" font-size="12" fill="#0a0a0a" opacity="0.6">这一次具体要做什么、给谁看</text>
+        <text x="260" y="280" font-family="var(--sans),var(--sans-zh)" font-size="12" font-style="italic" fill="#54c0d1">越往里，越贴近这一次的任务</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
 <section class="slide" data-animate="duo-mirror" data-slide-id="system-breakdown">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">WHAT · 是什么 02 · 04 / 16</div>
+      <div class="r">04 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1347,12 +1366,52 @@
   </div>
 </section>
 
-<!-- ============ 05 · Few-shot · three-forces（三个真实案例） ============ -->
+<section class="slide" data-animate="stacked-ledger" data-slide-id="bloat">
+  <div class="canvas-card">
+    <div class="chrome-min">
+      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
+      <div class="r">05 / 16</div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1.2vh">
+      <div class="t-cat">COST · 什么时候别用</div>
+      <h2 class="h-xl-zh" style="font-size:min(4.4vw,8vh)">Prompt 越长越好吗？</h2>
+    </div>
+
+    <div data-anim="ledger" style="flex:1;display:flex;flex-direction:column;justify-content:center">
+      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em;color:var(--accent)">01</div>
+        <div class="ledger-label">
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">指令互相排斥 · 客服话术冲突</h3>
+        </div>
+        <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--accent)"></span></div>
+      </div>
+      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em;color:var(--accent)">02</div>
+        <div class="ledger-label">
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">无法归因溯源 · 15 条规则误判一次听漏</h3>
+        </div>
+        <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--accent)"></span></div>
+      </div>
+      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
+        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em;color:var(--accent)">03</div>
+        <div class="ledger-label">
+          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">换模型可能失效 · 同一份说明书换了执行人</h3>
+        </div>
+        <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--accent)"></span></div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;padding-top:2vh">
+        <div class="t-cat accent">→ 能拆的规则，别都塞进 prompt</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="slide" data-animate="three-forces" data-slide-id="few-shot">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">HOW · 怎么用 01 · 05 / 16</div>
+      <div class="r">06 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1395,17 +1454,16 @@
   </div>
 </section>
 
-<!-- ============ 06 · CoT · duo-mirror ============ -->
 <section class="slide" data-animate="duo-mirror" data-slide-id="cot">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">HOW · 怎么用 02 · 06 / 16</div>
+      <div class="r">07 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
       <div class="t-cat">HOW · 怎么用</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">Chain of Thought：展示推理过程，也有代价</h2>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">生产环境一定需要思维链吗？</h2>
     </div>
 
     <div class="duo-compare" style="margin-top:4vh">
@@ -1433,12 +1491,11 @@
   </div>
 </section>
 
-<!-- ============ 07 · CoT 判断标准 · why-now 三列 ============ -->
 <section class="slide" data-animate="why-now" data-slide-id="cot-check">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">HOW · 怎么用 02 · 07 / 16</div>
+      <div class="r">08 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1475,57 +1532,11 @@
   </div>
 </section>
 
-<!-- ============ 08 · 越写越长 · stacked-ledger（工作场景案例） ============ -->
-<section class="slide" data-animate="stacked-ledger" data-slide-id="bloat">
-  <div class="canvas-card">
-    <div class="chrome-min">
-      <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">COST · 什么时候别用 01 · 08 / 16</div>
-    </div>
-
-    <div style="display:flex;flex-direction:column;gap:1.2vh">
-      <div class="t-cat">COST · 什么时候别用</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.4vw,8vh)">Prompt 为什么会越写越难维护</h2>
-    </div>
-
-    <div data-anim="ledger" style="flex:1;display:flex;flex-direction:column;justify-content:center">
-      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
-        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em">01</div>
-        <div class="ledger-label">
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">指令互相排斥 · 客服话术冲突</h3>
-          <p class="t-body-sm">「投诉先道歉安抚」与「外部责任不得先行认错」并存，同一投诉这轮承诺赔偿、下轮要求保留证据，答复随心情摇摆。</p>
-        </div>
-        <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--ink)"></span></div>
-      </div>
-      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
-        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em">02</div>
-        <div class="ledger-label">
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">无法归因溯源 · 15 条规则误判一次听漏</h3>
-          <p class="t-body-sm">告警解读叠了 15 条规则，把正常夜间调压判成漏损、自动派单，师傅白跑一趟；输出是合力，无法单独关闭某条做对照。</p>
-        </div>
-        <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--ink)"></span></div>
-      </div>
-      <div class="ledger-row" style="display:grid;grid-template-columns:auto 1fr auto;gap:2.4vw;align-items:center;padding:2.1vh 0;border-bottom:1px solid var(--border-subtle)">
-        <div class="ledger-num" style="font-family:var(--sans);font-weight:200;font-size:min(5.2vw,9.4vh);line-height:.9;letter-spacing:-.03em">03</div>
-        <div class="ledger-label">
-          <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(17px,1.65vw);letter-spacing:-.015em;margin-bottom:.5vh">换模型可能失效 · 同一份说明书换了执行人</h3>
-          <p class="t-body-sm">模型靠猜测意图工作，并非必然执行；「语气专业」旧版理解为严谨、新版理解为堆砌术语，版本一升级，长 prompt 漂移更远。</p>
-        </div>
-        <div class="ledger-icon"><span style="display:inline-block;width:12px;height:12px;background:var(--ink)"></span></div>
-      </div>
-      <div style="display:flex;justify-content:flex-end;padding-top:2vh">
-        <div class="t-cat accent">→ 能拆的规则，别都塞进 prompt</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 09 · Prompt vs 程序逻辑 · duo-mirror ============ -->
 <section class="slide" data-animate="duo-mirror" data-slide-id="vs-code">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">BOUNDARY · 边界 01 · 09 / 16</div>
+      <div class="r">09 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1557,17 +1568,16 @@
   </div>
 </section>
 
-<!-- ============ 10 · 使用边界 · grid-reveal 六卡 ============ -->
 <section class="slide" data-animate="grid-reveal" data-slide-id="boundary">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">BOUNDARY · 边界 02 · 10 / 16</div>
+      <div class="r">10 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
       <div class="t-cat">BOUNDARY · 边界</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">Prompt 使用边界：五道判断题</h2>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">Prompt 的能力边界</h2>
     </div>
 
     <div class="sub-grid-3-2" style="margin-top:3.4vh">
@@ -1605,12 +1615,11 @@
   </div>
 </section>
 
-<!-- ============ 11 · 灰色地带 · field-notes 六卡 ============ -->
 <section class="slide" data-animate="field-notes" data-slide-id="gray-zone">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">BOUNDARY · 边界 03 · 11 / 16</div>
+      <div class="r">11 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
@@ -1648,12 +1657,11 @@
   </div>
 </section>
 
-<!-- ============ 12 · Streaming · manifesto + ink 通栏 ============ -->
 <section class="slide" data-animate="manifesto" data-slide-id="streaming">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">STREAMING · 呈现 01 · 12 / 16</div>
+      <div class="r">12 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.6vh">
@@ -1676,17 +1684,16 @@
   </div>
 </section>
 
-<!-- ============ 13 · 三种通道 · grid-reveal 三子卡（含对话举例） ============ -->
 <section class="slide" data-animate="grid-reveal" data-slide-id="channels">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">STREAMING · 呈现 02 · 13 / 16</div>
+      <div class="r">13 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
       <div class="t-cat">STREAMING · 怎么呈现</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">SSE、WebSocket、HTTP chunk 怎么选</h2>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">三种方式对用户的区别</h2>
     </div>
 
     <div class="sub-grid-3-2" style="grid-template-rows:1fr;margin-top:3.4vh">
@@ -1709,17 +1716,16 @@
   </div>
 </section>
 
-<!-- ============ 14 · 流式 UI · three-forces ============ -->
 <section class="slide" data-animate="three-forces" data-slide-id="stream-ui">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">STREAMING · 呈现 03 · 14 / 16</div>
+      <div class="r">14 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
       <div class="t-cat">STREAMING · 怎么呈现</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">流式输出，对前端 UI 的三条要求</h2>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">采用流式输出如何从前端提升用户体验</h2>
     </div>
 
     <div data-anim="up" style="flex:1;display:grid;grid-template-columns:5fr 11fr;gap:1.6vw;margin-top:4vh;min-height:0">
@@ -1766,12 +1772,11 @@
   </div>
 </section>
 
-<!-- ============ 15 · 中断处理 · four-cards ============ -->
 <section class="slide" data-animate="four-cards" data-slide-id="stream-stop">
   <div class="canvas-card">
     <div class="chrome-min">
       <div class="l">PROMPT × STREAMING · FIELD NOTE</div>
-      <div class="r">STREAMING · 呈现 04 · 15 / 16</div>
+      <div class="r">15 / 16</div>
     </div>
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.8vh">
@@ -1807,7 +1812,6 @@
   </div>
 </section>
 
-<!-- ============ 16 · Closing Manifesto · 左 accent+ASCII / 右白底 takeaway ============ -->
 <section class="slide split" data-animate="split-statement" data-slide-id="closing">
   <div class="canvas-card">
     <div class="split-half">
@@ -1816,7 +1820,7 @@
         <canvas class="ascii-bg" aria-hidden="true"></canvas>
         <div class="chrome-min" style="margin-bottom:0;position:relative;z-index:1">
           <div class="l">16 / 16</div>
-          <div class="r">CLOSING</div>
+          <div class="r">16 / 16</div>
         </div>
 
         <div data-anim="manifesto" style="display:flex;flex-direction:column;gap:2vh;position:relative;z-index:1">
@@ -1878,119 +1882,168 @@
 <script>
 const SPEAKER_NOTES = [
   {
-    id: 'cover', title: 'Prompt 是什么', section: '开场', minutes: 0.5,
+        id: 'cover',
+    title: 'Prompt 是什么',
+    section: '开场',
+    minutes: 0.5,
     purpose: '建立主题与现场预期',
-    talk: ['一份关于 Prompt 与流式输出的学习笔记', '副标题点题：写给模型的指令，也是写给自己的设计判断'],
-    transition: '先给全场唯一主线', cue: '停顿，确认观众屏已同步'
+    talk: ['一份关于 Prompt 与流式输出的学习笔记','副标题点题：写给模型的指令，也是写给自己的设计判断'],
+    transition: '从三类 Prompt 进入主题',
+    cue: '停顿，确认观众屏已同步'
   },
   {
-    id: 'thesis', title: 'Prompt 不是咒语，是边界', section: '核心判断', minutes: 0.8,
-    purpose: '抛出全场主线：指令的本质是划分人机决定权',
-    talk: ['强调「边界」而非「技巧」', '每段指令都在回答：什么交给机器，什么留给人'],
-    transition: '从最基本的「是什么」讲起', cue: '在「边界」一词上停顿'
+        id: 'three-kinds',
+    title: '三类 Prompt：谁负责什么',
+    section: '是什么',
+    minutes: 1.4,
+    purpose: '讲清三类 Prompt 的分工与用效周期；承接原核心判断页的主线',
+    talk: ['System 定角色：长期风格模版，级别最高、每次对话生效','User 下任务：本次任务输出模版，越具体结果越可靠','Developer 立规矩：技术格式模版，管输出格式与工程约束'],
+    fallback: ['【原第 2 页核心判断，移入备注】Prompt 不是咒语，是边界。','每一段指令，本质上都在划同一条线：什么交给机器，什么留给人。这份笔记从头到尾，只回答这一个问题。','用效周期对照：System 是长期风格模版（岗位说明书）；User 只管本次任务输出；Developer 是技术格式模版，常识性规则不必写入。'],
+    transition: '先看三类 Prompt 的关系图，再展开 System 实例',
+    cue: '「用效周期」是新增信息，放慢'
   },
   {
-    id: 'three-kinds', title: '三类 Prompt：谁负责什么', section: '是什么', minutes: 1.0,
-    purpose: '讲清 System / User / Developer 的分工',
-    talk: ['System 是岗位说明书，长期生效', 'User 是一次对话里的具体任务', 'Developer 是技术与工程规矩，不写常识'],
-    transition: '下一页用真实 system prompt 展开第一层', cue: '岗位说明书的比喻放慢'
+        id: 'prompt-relations',
+    title: '三类 Prompt 如何协作：同一次请求的三层',
+    section: '是什么',
+    minutes: 1.2,
+    purpose: '说明三类提示词不是三选一，而是同一次请求中由外到内分层协作',
+    talk: ['最外层 Developer：约束输出格式（虚线，表示技术边界）','中间 System：贯穿身份与腔调','最内层 User：本次具体任务，最终三层一起汇成一次回答'],
+    transition: '关系清楚后，用真实 System prompt 展开',
+    cue: '由外向内指三层'
   },
   {
-    id: 'system-breakdown', title: '一份真实 System prompt 的两层结构', section: '是什么', minutes: 1.2,
-    purpose: '用本 deck 实际使用的 system prompt 示范角色设定与角色性格的区别',
-    talk: ['左栏角色设定：身份、服务对象、工作范围、立场', '右栏角色性格：审美总纲、表达规则、温度与洁癖', '点题：通篇没有「要有礼貌」这类常识——常识不占 prompt 位置'],
-    transition: '知道怎么立角色之后，看两个具体写法', cue: '可以指屏幕左右两栏对照讲'
+        id: 'system-breakdown',
+    title: '一份真实 System prompt 的两层结构',
+    section: '是什么',
+    minutes: 1.2,
+    purpose: '用实际 system prompt 示范角色设定与角色性格的区别',
+    talk: ['左栏角色设定：身份、服务对象、工作范围、立场','右栏角色性格：审美总纲、表达规则、温度与洁癖'],
+    transition: '紧接着看：规则越叠越多会发生什么',
+    cue: '左右两栏对照'
   },
   {
-    id: 'few-shot', title: 'Few-shot：给范本，比讲道理快', section: '怎么用', minutes: 1.4,
-    purpose: '用三个工作案例说明 few-shot 的适用场景',
-    talk: ['案例一设计视角：告警语气难以描述，直接给输入输出范本', '案例二 design-to-code：圆角阴影屡教不改，范本比要求有效', '案例三 DMA 阈值：三行数据→判定样例，模型自己学到连续性、倍数、突增；数值是示例口径'],
-    fallback: [
-      '案例一完整范本（设计视角）——输入：泵站 3 号机组电流过载，持续 12 分钟；输出：3 号机组电流偏高一阵子了，先看下现场画面，再决定切不切泵。',
-      '输入：DMA-07 夜间最小流量连续 3 天超基线 50%；输出：07 片区这几晚用水量不太对，可能有暗漏，建议明天先安排听漏。',
-      '再给「余氯 0.25mg/L，低于下限 0.3」时，它照味道写出「余氯有点偏低了，先查下加药间是不是药量没跟上」——味道是抄会的，不是被「专业且人性化」教会的。',
-      '案例二完整范本（design-to-code）——卡片：直角 border-radius:0、无阴影、描边只用 var(--border-subtle)，不新增颜色值；按钮：背景 var(--accent)、文字 var(--accent-on)，禁止自加渐变、禁止 hover 放大。从「提要求」变为「示范成品」。',
-      '案例三完整范本（DMA 阈值，示例数据待业务核对）——三晚最小流量 13/14/12.5、基线 12：正常不告警（未超 1.25 倍）；19/20.5/18.5：黄色预警疑似漏损（连续 3 晚 ≥ 1.5 倍）；前两晚正常、某晚突增 31：橙色告警先排查爆管或施工，不直接判漏损。',
-      '关键提醒：这套样例只让 AI 出建议，阈值与派单仍由人定。'
-    ],
-    transition: '第二个写法是思维链，它代价更大', cue: '第三个案例放慢，说明阈值仍由人定'
+        id: 'bloat',
+    title: 'Prompt 越长越好吗？',
+    section: '成本',
+    minutes: 1.2,
+    purpose: '页面只保留三个标题制造悬念；完整解释放在备注中讲述',
+    talk: ['一、指令互相排斥','二、无法归因溯源','三、换模型可能失效'],
+    fallback: ['一、指令互相排斥（客服话术冲突）——旧规矩「用户投诉先道歉安抚」，新规矩「外部责任工单不得先行认错或承诺赔偿」。同一投诉「你们管子爆了淹了我家地板」，这轮输出「非常抱歉，我们一定负责赔偿」，下轮输出「事故原因正在核实，请保留现场照片」，答复随心情摇摆。','二、无法归因溯源（15 条规则误判一次听漏）——告警解读叠了 15 条规则，把正常夜间调压判成漏损、自动派单，师傅白跑一趟。删激进的怕真漏报、改阈值怕影响全部 DMA、怀疑参照找错也无法验证，输出是合力，做不了单条对照。','三、换模型可能失效（同一份说明书换了执行人）——模型靠猜测意图工作，「语气专业」旧版理解为严谨克制，新版理解成堆砌术语；版本一升级，长 prompt 漂移更远。应对：关键要求用 few-shot 锚定，换模型后重要场景回归测一遍。','落点：能拆的规则别都塞进 prompt——确定性判断移到代码，prompt 只留「说人话」那一层。'],
+    transition: '规则讲完，进入两个具体写法',
+    cue: '三条标题先念，再展开备注里的故事'
   },
   {
-    id: 'cot', title: 'Chain of Thought：展示推理过程，也有代价', section: '怎么用', minutes: 1.2,
-    purpose: '对照 CoT 的适用场景与生产代价',
-    talk: ['适用：过程本身有决策价值，如漏损分析报告', '代价：token 与延迟、推理易被噪音带偏、换模型可能失效', '不是不要用，而是生产环境不要依赖'],
-    transition: '什么时候值得用？三个问题', cue: '左右对照时配合手势'
+        id: 'few-shot',
+    title: 'Few-shot：给范本，比讲道理快',
+    section: '怎么用',
+    minutes: 1.3,
+    purpose: '用三个案例说明 few-shot 适用场景',
+    talk: ['设计视角：语气难以描述，直接给输入输出范本','design-to-code：圆角阴影屡教不改，范本比要求有效','水务告警阈值：三行数据→判定样例，学到连续性、倍数、突增（示例口径）'],
+    transition: '第二个写法是思维链',
+    cue: '第三个案例放慢，阈值仍由人定'
   },
   {
-    id: 'cot-check', title: '要不要展示思考过程？先回答三个问题', section: '怎么用', minutes: 1.0,
-    purpose: '给出 CoT 的可操作判断标准',
-    talk: ['需不需要过程、愿不愿付费、不稳定会不会影响生产', '第三问是底线，用 accent 强调'],
-    transition: '越长越贵的写法推广到一般规律', cue: '读完第三问停 2 秒'
+        id: 'cot',
+    title: '生产环境一定需要思维链吗？',
+    section: '怎么用',
+    minutes: 1.2,
+    purpose: '以提问式标题对照 CoT 的适用与代价',
+    talk: ['适合：过程本身有决策价值，如 DMA 漏损分析报告','代价：token 成本、推理易漂移、换模型可能失效','结论：不是一定需要，生产环境不宜依赖'],
+    transition: '用三个问题帮助判断',
+    cue: '标题是反问，留给观众思考两秒'
   },
   {
-    id: 'bloat', title: 'Prompt 为什么会越写越难维护', section: '什么时候别用', minutes: 1.4,
-    purpose: '用三个工作场景解释长 prompt 的结构性问题',
-    talk: ['客服话术：安抚与外部责任不认责两条规矩并存，同一投诉两种答复', '15 条告警规则合力误判夜间调压为漏损，师傅白跑，无法单条归因', '换模型如换执行人：「专业」旧版理解为严谨，新版理解为堆术语'],
-    fallback: [
-      '情况一完整案例（客服话术冲突）——旧规矩：「用户投诉时先道歉、安抚情绪」；新规矩（爆管工单吃过亏后补的）：「涉及外部责任的工单，不得先行认错或承诺赔偿」。用户说「你们管子爆了淹了我家地板！」时，输出 A 命中旧规矩：「非常抱歉给您造成了损失，我们一定会负责赔偿……」；输出 B 命中新规矩：「事故原因正在核实，建议您先保留现场照片……」。同一投诉两种答复轮着出现，投诉被放大。',
-      '情况二完整案例（无法归因）——告警解读 prompt 叠了 15 条规则：宁错报勿漏报、连续 3 晚偏高即疑似漏损、参考相似 DMA 历史、结合近期施工记录……。某天把一次正常夜间调压判成漏损并自动派单，师傅白跑一趟。排查时每条都删不动：删激进的怕真漏报；改阈值怕影响所有 DMA；怀疑相似 DMA 找错参照也无法验证。结论：规则叠到无法归因时不要再打补丁，拆——确定性判断移到代码，prompt 只留「说人话」那一层。',
-      '情况三补充解释（换模型为什么失灵）——prompt 不是程序，模型每次都在猜「这么写的人最可能想要什么」。升级等于换了语感不同的新员工：「语气专业一点」，旧版理解成严谨克制，新版理解成多堆术语；有些旧 prompt 当年甚至利用了老模型的小脾气或 bug，新版一改，咒语自然失效。应对：关键要求用 few-shot 锚定、换模型后重要场景回归测一遍。'
-    ],
-    transition: '规则该拆到哪里去？看分工', cue: '白跑一趟是重点，讲出代价'
+        id: 'cot-check',
+    title: '要不要展示思考过程？先回答三个问题',
+    section: '怎么用',
+    minutes: 1.0,
+    purpose: '给出可操作判断标准',
+    talk: ['用户是否需要看到分析过程','是否愿意为 CoT 付费','结果不稳定是否会影响生产（底线）'],
+    transition: '下一个问题：Prompt 与代码如何分工',
+    cue: '第三问用 accent 强调'
   },
   {
-    id: 'vs-code', title: '怎么分工：先看能不能量化', section: '边界', minutes: 1.0,
-    purpose: '划分程序逻辑与 prompt 的职责线',
-    talk: ['能确定性计算、能画流程图的交给代码', '审美、模糊语义才是 prompt 的活，并提供样本'],
-    transition: '把分工落成五道判断题', cue: '「一条都不必交给模型」可重读'
+        id: 'vs-code',
+    title: '怎么分工：先看能不能量化',
+    section: '边界',
+    minutes: 1.0,
+    purpose: '划分程序逻辑与 prompt 职责线',
+    talk: ['能确定性计算、能画流程图的交给代码','审美、模糊语义才属于 prompt，并以范本兜底'],
+    transition: '把分工落成能力边界',
+    cue: '「一条都不必交给模型」可重读'
   },
   {
-    id: 'boundary', title: 'Prompt 使用边界：五道判断题', section: '边界', minutes: 1.2,
-    purpose: '给出可执行的边界 checklist',
-    talk: ['前三题答是→代码，后两题答是→考虑 prompt', '黑卡总原则：会不会影响真实世界运行'],
-    transition: '但现实更多在中间地带', cue: '五题快速过，总原则放慢'
+        id: 'boundary',
+    title: 'Prompt 的能力边界',
+    section: '边界',
+    minutes: 1.2,
+    purpose: '用五道判断题给出能力边界 checklist',
+    talk: ['前三题答是→代码：影响供水安全、需要溯源、能画流程图','后两题答是→考虑 prompt：模糊语义输入、输出给人看','总原则：会不会影响真实世界运行'],
+    transition: '但现实更多在中间地带',
+    cue: '黑卡总原则放慢'
   },
   {
-    id: 'gray-zone', title: '灰色地带：AI 出结果，人来做决定', section: '边界', minutes: 1.2,
-    purpose: '用水务三个场景说明人机协作',
-    talk: ['上排 AI 输出：告警人话、建议列表、工单摘要', '下排人工决策：阈值、派单选择、优先级', '涉及现场安全与责任的动作永远留给人'],
-    transition: '内容边界讲完，进入呈现层', cue: '「师傅决定按不按下去」点题'
+        id: 'gray-zone',
+    title: '灰色地带：AI 出结果，人来做决定',
+    section: '边界',
+    minutes: 1.2,
+    purpose: '用水务三场景说明人机协作',
+    talk: ['AI 输出：告警人话、建议列表、工单摘要','人工决策：阈值、派单选择、优先级','现场安全与责任永远留给人'],
+    transition: '内容边界讲完，进入呈现层',
+    cue: '「最后那一下永远是人」'
   },
   {
-    id: 'streaming', title: '边算，边给你看', section: '怎么呈现', minutes: 0.8,
+        id: 'streaming',
+    title: '边算，边给你看',
+    section: '怎么呈现',
+    minutes: 0.8,
     purpose: '定义流式输出及两个理由',
-    talk: ['边算边渲染边推送', '体验：实时看到思考，降低焦虑', '成本：随时停止，停止部分不计费'],
-    transition: '实现上有三条通道', cue: '黑条出现时稍停'
+    talk: ['边算边渲染边推送','体验：实时看到思考，降低焦虑','成本：随时停止，停止部分不计费'],
+    transition: '实现上有三种方式',
+    cue: '黑条出现时稍停'
   },
   {
-    id: 'channels', title: 'SSE、WebSocket、HTTP chunk 怎么选', section: '怎么呈现', minutes: 1.1,
-    purpose: '用值班员小张的三个对话区分三条通道',
-    talk: ['SSE 像对讲机：单向可中断，对话和告警用它', 'WebSocket 像打电话：双向可插话，语音转写和协同', 'HTTP chunk 像盖章报告：先骨架后成品，报告与复盘'],
-    fallback: [
-      'SSE 对话脚本（像对讲机广播）——小张：「帮我总结一下 DMA-07 昨晚的流量情况。」AI（字一个个蹦）：「昨·晚·07·片·区·最·小·流·量……」小张一眼看出方向不对：「停！」AI 立刻停住，已写的字保留，末尾标「已停止生成」。服务器只说不听，一条单向通道，随时可切断。',
-      'WebSocket 对话脚本（像打电话）——小张戴耳机边看现场边说：「今日下午三点，07 片区……」屏幕边说边出字；他突然想起：「等下，把下午改成上午。」屏幕立刻改为「今日上午三点」，不用等说完、也不用重新提问。双方随时能插话。',
-      'HTTP chunk 对话脚本（像等一份盖章报告）——小张：「生成一份上周漏损分析周报。」界面先出现骨架：封面、图表占位框在转；内容一块块送达，代码块完整后图表一次性渲染，最终是一份可直接转发的完整周报。中途想加需求只能重新提一次。'
-    ],
-    transition: '通道选定后，界面要跟上', cue: 'SSE 高亮，从它讲起'
+        id: 'channels',
+    title: '三种方式对用户的区别',
+    section: '怎么呈现',
+    minutes: 1.1,
+    purpose: '从用户感知角度区分三种通道',
+    talk: ['SSE 像对讲机：单向可中断，对话和告警','WebSocket 像打电话：双向可插话，语音与协同','HTTP chunk 像盖章报告：先骨架后成品，报告与复盘'],
+    fallback: ['SSE 完整对话——小张：「总结 DMA-07 昨晚流量」，字逐段推来；发现方向不对立刻喊停，已生成内容保留并标记。','WebSocket——小张戴耳机口述「今日下午三点……」，中途「下午改上午」即时生效，无需重新提问。','HTTP chunk——请求「生成上周漏损周报」，先出骨架，内容分块送达、代码完整后图表一次性渲染。'],
+    transition: '方式选定后，界面如何接住',
+    cue: '从高亮的 SSE 讲起'
   },
   {
-    id: 'stream-ui', title: '流式输出，对前端 UI 的三条要求', section: '怎么呈现', minutes: 1.2,
+        id: 'stream-ui',
+    title: '采用流式输出如何从前端提升用户体验',
+    section: '怎么呈现',
+    minutes: 1.2,
     purpose: '把流式体验落成前端要求',
-    talk: ['对话：首字快、逐字吐', '文件：先骨架后渲染', '状态：出错中断白话可见', '核心：别让用户面对空白屏幕'],
-    transition: '还有一个必经场景：停止', cue: '左侧黑卡原则先读'
+    talk: ['对话：首字快、逐字吐','文件：先骨架后渲染','状态：出错中断白话可见','核心：别让用户面对空白屏幕'],
+    transition: '还有必经场景：停止',
+    cue: '左侧黑卡原则先读'
   },
   {
-    id: 'stream-stop', title: '中途停止生成，怎么处理', section: '怎么呈现', minutes: 1.0,
-    purpose: '给出中断处理的四个动作',
-    talk: ['秒级响应、保留并标记、白话告知、给出下一步', '第四条建立信任：用户永远有路可走'],
-    transition: '收束全场', cue: '四条各停半秒'
+        id: 'stream-stop',
+    title: '中途停止生成，怎么处理',
+    section: '怎么呈现',
+    minutes: 1.0,
+    purpose: '给出中断处理四个动作',
+    talk: ['秒级响应','保留并标记','白话告知','给出下一步'],
+    transition: '收束全场',
+    cue: '四条各停半秒'
   },
   {
-    id: 'closing', title: '写 Prompt，就是划边界', section: '收束', minutes: 0.8,
-    purpose: '回扣主线并留下三条规则',
-    talk: ['回扣第 2 页：不是咒语，是边界', '三条连成判断：代码—prompt—人', '落到现场：少跑冤枉路，少挨投诉'],
-    transition: '结束演讲，进入提问', cue: '停顿 2 秒后致谢'
-  }
+        id: 'closing',
+    title: '写 Prompt，就是划边界',
+    section: '收束',
+    minutes: 0.8,
+    purpose: '回扣主线并留三条规则',
+    talk: ['回扣主线：不是咒语，是边界','三条连成判断：代码—prompt—人','落到现场：少跑冤枉路，少挨投诉'],
+    transition: '结束演讲，进入提问',
+    cue: '停顿 2 秒后致谢'
+  },
 ];
 window.__SPEAKER_NOTES__ = SPEAKER_NOTES;
 </script>
