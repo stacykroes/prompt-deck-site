@@ -1433,26 +1433,19 @@
         <div class="t-body-sm" style="margin-top:auto;color:rgba(250,250,248,.78)">这一步思考过程默认对用户隐藏，也可以在界面上展示。</div>
       </div>
 
-      <div style="display:grid;grid-template-rows:repeat(3,1fr);gap:1.2vh;min-height:0">
+      <div style="display:grid;grid-template-rows:repeat(2,1fr);gap:1.2vh;min-height:0">
         <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:center;padding:1.6vh 1.6vw">
           <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7.8vh);line-height:.9;color:var(--accent)">01</div>
           <div>
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(16px,1.25vw);letter-spacing:-.015em;margin-bottom:.4vh">多步计算，跳步容易算错</h4>
-            <p class="t-body-sm">让它先列条件、再计算，中间步骤能检查。</p>
+            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(16px,1.25vw);letter-spacing:-.015em;margin-bottom:.4vh">复杂计算，容易一步算错</h4>
+            <p class="t-body-sm">先列条件再计算，中间过程查得到。</p>
           </div>
         </div>
         <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:center;padding:1.6vh 1.6vw">
           <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7.8vh);line-height:.9;color:var(--accent)">02</div>
           <div>
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(16px,1.25vw);letter-spacing:-.015em;margin-bottom:.4vh">判断类问题，想看它凭什么</h4>
-            <p class="t-body-sm">把依据摊出来，用户才能核对，不只是信不信。</p>
-          </div>
-        </div>
-        <div class="card-fill" style="display:grid;grid-template-columns:auto 1fr;gap:1.6vw;align-items:center;padding:1.6vh 1.6vw">
-          <div style="font-family:var(--sans);font-weight:200;font-size:min(4.2vw,7.8vh);line-height:.9;color:var(--accent)">03</div>
-          <div>
-            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(16px,1.25vw);letter-spacing:-.015em;margin-bottom:.4vh">DMA 夜间流量异常</h4>
-            <p class="t-body-sm">先排抄表误差、施工停水，再判是否漏损。</p>
+            <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(16px,1.25vw);letter-spacing:-.015em;margin-bottom:.4vh">结论该不该信</h4>
+            <p class="t-body-sm">让它把理由一起给出，用户自己判断。</p>
           </div>
         </div>
       </div>
@@ -1775,7 +1768,7 @@
 
     <div data-anim="line" style="display:flex;flex-direction:column;gap:1.4vh">
       <div class="t-cat">STREAMING · 怎么呈现</div>
-      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">采用流式输出如何从前端提升用户体验</h2>
+      <h2 class="h-xl-zh" style="font-size:min(4.6vw,8.2vh)">流式输出如何从前端提升用户体验</h2>
     </div>
 
     <div data-anim="up" style="flex:1;display:grid;grid-template-columns:5fr 11fr;gap:1.6vw;margin-top:4vh;min-height:0">
@@ -1791,9 +1784,8 @@
           <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">01</div>
           <div style="display:flex;flex-direction:column;gap:.8vh">
             <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">普通对话</h4>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2vw">
-              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">首字延迟不能过高，思考态需有动画微交互。</p></div>
-              <div><div class="t-meta" style="margin-bottom:.3vh">前端重点</div><p class="t-body-sm">逐字吐出，避免思考完成后整段输出。</p></div>
+            <div style="display:flex;flex-direction:column;gap:.5vh">
+              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">首字尽快出现并有思考动画，减少空白等待焦虑。</p></div>
             </div>
           </div>
         </div>
@@ -1801,9 +1793,8 @@
           <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">02</div>
           <div style="display:flex;flex-direction:column;gap:.8vh">
             <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">输出文件</h4>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2vw">
-              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">结构化结果以可视化呈现，提升可读性。</p></div>
-              <div><div class="t-meta" style="margin-bottom:.3vh">前端重点</div><p class="t-body-sm">先给占位骨架，代码完整后再渲染图表。</p></div>
+            <div style="display:flex;flex-direction:column;gap:.5vh">
+              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">结果做成图表，比纯文字更好读。</p></div>
             </div>
           </div>
         </div>
@@ -1811,9 +1802,8 @@
           <div style="font-family:var(--sans);font-weight:200;font-size:min(4.6vw,8.5vh);line-height:.9;color:var(--accent)">03</div>
           <div style="display:flex;flex-direction:column;gap:.8vh">
             <h4 style="font-family:var(--sans),var(--sans-zh);font-weight:500;font-size:max(17px,1.4vw);letter-spacing:-.015em">状态可见</h4>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2vw">
-              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">出错、中断状态可见并可操作，增强信任。</p></div>
-              <div><div class="t-meta" style="margin-bottom:.3vh">前端重点</div><p class="t-body-sm">白话标记出错，中断标记「已停止生成」。</p></div>
+            <div style="display:flex;flex-direction:column;gap:.5vh">
+              <div><div class="t-meta" style="margin-bottom:.3vh">体验重点</div><p class="t-body-sm">出错中断都明说、可操作，用户才敢继续用。</p></div>
             </div>
           </div>
         </div>
@@ -1837,7 +1827,7 @@
       </div>
     </div>
 
-    <div data-anim="up" style="flex:1;display:grid;grid-template-columns:repeat(4,1fr);gap:1.6vw;margin-top:5vh;align-items:start">
+    <div data-anim="up" style="flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:2.6vw 2.4vw;margin-top:5vh;align-items:stretch">
       <div style="border-top:1px solid var(--ink);padding-top:1.8vh">
         <div class="t-meta">— 01 / STOP</div>
         <h3 style="font-family:var(--sans),var(--sans-zh);font-weight:400;font-size:max(18px,1.7vw);letter-spacing:-.015em;margin:1.4vh 0 1vh">秒级响应</h3>
@@ -1999,7 +1989,7 @@ const SPEAKER_NOTES = [
     section: '怎么用',
     minutes: 1.0,
     purpose: '先定义什么是思维链，再谈生产环境要不要用',
-    talk: ['定义：先写推理步骤，再给答案；思考过程默认隐藏，也可展示','多步计算跳步容易算错，列出条件便于检查','DMA 夜间流量异常：先排误差与施工，再判漏损'],
+    talk: ['定义：先写推理步骤，再给答案；思考过程默认隐藏，也可展示','复杂计算容易一步算错，先列条件，过程查得到','结论该不该信，把理由一起给出，用户自己判断'],
     transition: '第二个写法是思维链',
     cue: '定义页讲完后停顿，引出下一页的反问'
   },
@@ -2076,11 +2066,11 @@ const SPEAKER_NOTES = [
   },
   {
         id: 'stream-ui',
-    title: '采用流式输出如何从前端提升用户体验',
+    title: '流式输出如何从前端提升用户体验',
     section: '怎么呈现',
     minutes: 1.2,
-    purpose: '把流式体验落成前端要求',
-    talk: ['对话：首字快、逐字吐','文件：先骨架后渲染','状态：出错中断白话可见','核心：别让用户面对空白屏幕'],
+    purpose: '从用户体验角度梳理流式输出的三个重点',
+    talk: ['对话：首字尽快出现，减少空白等待','文件：结果做成图表，比纯文字好读','状态：出错中断都明说、可操作，用户才敢继续用','核心：别让用户面对空白屏幕'],
     transition: '还有必经场景：停止',
     cue: '左侧黑卡原则先读'
   },
