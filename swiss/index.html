@@ -1631,23 +1631,23 @@
       </article>
       <article class="sub-card">
         <span class="nb-corner">Q2</span>
-        <h4 class="ttl">结果是否需要数据溯源？</h4>
-        <p class="desc">是 → <b>代码</b>　否 → 考虑 prompt</p>
+        <h4 class="ttl">计算过程对用户有意义吗？</h4>
+        <p class="desc">是 → <b>prompt</b>　否 → 代码</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">Q3</span>
-        <h4 class="ttl">逻辑能否画成流程图或 if-else？</h4>
-        <p class="desc">是 → <b>代码</b>　否 → 考虑 prompt</p>
+        <h4 class="ttl">这件事能不能照着「第一步、第二步…」一步步走清楚？</h4>
+        <p class="desc">能 → <b>代码</b>　不能 → prompt</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">Q4</span>
-        <h4 class="ttl">输入是自由文本或模糊语义吗？</h4>
-        <p class="desc">是 → <b>考虑 prompt</b>　否 → 代码</p>
+        <h4 class="ttl">输入信息是自然语言还是规范的数据？</h4>
+        <p class="desc">自然语言 → <b>prompt</b>　规范数据 → 代码</p>
       </article>
       <article class="sub-card">
         <span class="nb-corner">Q5</span>
-        <h4 class="ttl">输出是给人看，而非给系统执行吗？</h4>
-        <p class="desc">是 → <b>考虑 prompt</b>　否 → 代码</p>
+        <h4 class="ttl">结果是给人看还是输出给系统执行？</h4>
+        <p class="desc">给人看 → <b>prompt</b>　给系统执行 → 代码</p>
       </article>
       <article class="sub-card ink">
         <span class="nb-corner">RULE</span>
@@ -2029,7 +2029,7 @@ const SPEAKER_NOTES = [
     section: '边界',
     minutes: 1.2,
     purpose: '用五道判断题给出能力边界 checklist',
-    talk: ['前三题答是→代码：影响供水安全、需要溯源、能画流程图','后两题答是→考虑 prompt：模糊语义输入、输出给人看','总原则：会不会影响真实世界运行'],
+    talk: ['Q1 答错会影响供水安全 → 代码','Q2 计算过程对用户有意义 → 亮给用户（prompt）；Q3 能一步步走清楚 → 代码','Q4 自然语言 → prompt、规范数据 → 代码；Q5 给人看 → prompt、给系统执行 → 代码','总原则：会不会影响真实世界运行'],
     transition: '但现实更多在中间地带',
     cue: '黑卡总原则放慢'
   },
